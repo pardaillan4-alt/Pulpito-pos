@@ -1,9 +1,8 @@
-// Opcional: puedes pegar tus datos aquí o, más fácil, pegarlos dentro de la app (pantalla de inicio).
 window.FIREBASE_CONFIG = {
-  apiKey: "PEGA_AQUI_TU_API_KEY",
-  authDomain: "PEGA_AQUI.firebaseapp.com",
-  projectId: "PEGA_AQUI",
-  storageBucket: "PEGA_AQUI.appspot.com",
-  messagingSenderId: "PEGA_AQUI",
-  appId: "PEGA_AQUI"
+  apiKey: "AIzaSyC4DpdS49DUpKBT2agRdLaS-na9vBh0DGY",
+  authDomain: "pulpito-pos.firebaseapp.com",
+  projectId: "pulpito-pos",
+  storageBucket: "pulpito-pos.firebasestorage.app",
+  messagingSenderId: "65372699949",
+  appId: "1:65372699949:web:a33f42c1e31032c62a27a4"
 };
