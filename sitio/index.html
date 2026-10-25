@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Pulpito Pirata · Marisquería en Coyoacán</title>
+<meta name="description" content="El Pulpito Pirata, marisquería en Pedregal de Santa Úrsula, Coyoacán. Cócteles, caldos, mojarras, camarones y pulpo preparados al momento. Abierto todos los días de 10:00 a 19:00.">
+<meta name="theme-color" content="#0b2a43">
+<meta property="og:title" content="El Pulpito Pirata · Marisquería">
+<meta property="og:description" content="Sabor del mar, directo a tu mesa. Coyoacán, CDMX.">
+<meta property="og:image" content="../icon-512.png">
+<meta property="og:type" content="restaurant">
+<link rel="icon" href="../icon-192.png">
+<link rel="apple-touch-icon" href="../icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Pirata+One&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"El Pulpito Pirata","servesCuisine":["Mariscos","Mexicana"],"telephone":"+52 55 5618 7180","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Av. Santa Úrsula / Santo Tomás 648-L 5, Pedregal de Santa Úrsula","addressLocality":"Coyoacán","addressRegion":"CDMX","addressCountry":"MX"},"openingHours":"Mo-Su 10:00-19:00"}
+</script>
+<style>
+:root{
+  --navy:#0b2a43;--deep:#061a2b;--sea:#0f4c6e;--teal:#1d8a99;--foam:#e8f4f1;
+  --sand:#f3ead2;--paper:#fffaf0;--gold:#e2b25c;--gold2:#c9a15a;--coral:#e8603c;--red:#c8402a;
+  --ink:#0b2a43;--mut:#5d6f7c;--line:#e3d6b4;
+  --r:22px;--max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--sand);color:var(--ink);font:17px/1.6 "Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+html,body{overflow-x:clip}
+footer .waves{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.08;margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 13px/1 "Outfit",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--coral)}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font:600 16px/1 "Outfit",sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--deep);box-shadow:0 10px 30px -8px rgba(226,178,92,.7)}
+.btn-gold:hover{box-shadow:0 16px 36px -8px rgba(226,178,92,.85)}
+.btn-ghost{background:rgba(255,255,255,.08);color:var(--sand);border:1.5px solid rgba(243,234,210,.35);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.btn svg{width:18px;height:18px}
+
+/* ---------- Header ---------- */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
+.top.solid{background:rgba(6,26,43,.96);box-shadow:0 8px 30px -12px rgba(0,0,0,.5);padding:10px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--sand)}
+.brand img{width:46px;height:46px;border-radius:50%;background:#fff;border:2px solid var(--gold);object-fit:cover}
+.brand b{font:400 26px/1 "Pirata One",serif;letter-spacing:.5px}
+.brand small{display:block;font:500 11px/1 "Outfit";letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a{color:var(--sand);text-decoration:none;font-weight:500;padding:9px 14px;border-radius:999px;transition:background .2s}
+.nav a:hover{background:rgba(255,255,255,.1)}
+.nav .btn{padding:11px 20px;margin-left:8px}
+.burger{display:none;background:none;border:0;color:var(--sand);padding:8px;cursor:pointer}
+.burger svg{width:28px;height:28px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:var(--sand);overflow:hidden;
+  background:radial-gradient(1200px 600px at 80% 20%,rgba(29,138,153,.45),transparent 60%),radial-gradient(800px 500px at 10% 90%,rgba(232,96,60,.18),transparent 60%),linear-gradient(170deg,#0b2a43 0%,#08304d 45%,#061a2b 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(243,234,210,.08) 1px,transparent 1px);background-size:26px 26px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:110px;padding-bottom:150px}
+.hero h1{font-size:clamp(48px,8vw,104px);font-weight:900;letter-spacing:-.02em;margin:18px 0 10px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold);display:block;font-size:.62em;letter-spacing:0}
+.hero p.lead{font-size:clamp(18px,2vw,21px);max-width:540px;color:#c9d6df;margin:0 0 32px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:flex;flex-wrap:wrap;gap:26px;margin-top:44px;padding-top:28px;border-top:1px solid rgba(243,234,210,.15)}
+.facts div{display:flex;align-items:center;gap:12px}
+.facts svg{width:38px;height:38px;padding:9px;border-radius:12px;background:rgba(226,178,92,.14);color:var(--gold);flex:none}
+.facts b{display:block;font-weight:600;line-height:1.2}
+.facts span{font-size:14px;color:#9fb3c2}
+.medal{position:relative;justify-self:center;width:min(420px,80vw);aspect-ratio:1}
+.medal .ring{position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(226,178,92,.5);animation:spin 60s linear infinite}
+.medal .ring2{inset:-26px;border:1px solid rgba(243,234,210,.1);border-style:solid}
+.medal .disc{position:absolute;inset:28px;border-radius:50%;background:#fff;box-shadow:0 0 0 10px rgba(226,178,92,.25),0 0 0 22px rgba(226,178,92,.08),0 40px 80px -20px rgba(0,0,0,.6);display:grid;place-items:center;overflow:hidden;animation:bob 6s ease-in-out infinite}
+.medal .disc img{width:88%}
+.medal svg.txt{position:absolute;inset:0;width:100%;height:100%;animation:spin 40s linear infinite reverse}
+.medal svg.txt text{font:600 15px "Outfit";letter-spacing:6px;fill:var(--gold);text-transform:uppercase}
+.tag{position:absolute;background:var(--paper);color:var(--ink);padding:12px 16px;border-radius:16px;box-shadow:0 20px 40px -12px rgba(0,0,0,.5);display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;line-height:1.2;animation:bob 7s ease-in-out infinite}
+.tag small{display:block;font-weight:400;color:var(--mut);font-size:13px}
+.tag i{font-style:normal;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--coral);color:#fff}
+.tag i svg{width:20px;height:20px}
+.tag.t1{left:-30px;bottom:16%;animation-delay:-2s}
+.tag.t2{right:-18px;top:10%;animation-delay:-4s}
+.tag.t2 i{background:var(--teal)}
+.waves{position:absolute;left:0;right:0;bottom:-1px;z-index:3;line-height:0}
+.waves svg{width:200%;height:120px;display:block}
+.waves .w1{animation:drift 18s linear infinite}
+.waves .w2{position:absolute;bottom:0;left:0;animation:drift 11s linear infinite reverse;opacity:.6}
+.bubble{position:absolute;bottom:-40px;border-radius:50%;border:1.5px solid rgba(243,234,210,.35);background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),transparent 60%);animation:rise linear infinite;z-index:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes drift{to{transform:translateX(-50%)}}
+@keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:1}100%{transform:translateY(-110vh) translateX(30px);opacity:0}}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--sand);overflow:hidden;padding:26px 0;border-bottom:1px solid var(--line)}
+.marquee .track{display:flex;width:max-content;animation:drift 40s linear infinite}
+.marquee span{font:500 italic clamp(22px,3vw,34px)/1 "Fraunces",serif;color:var(--navy);padding:0 26px;display:flex;align-items:center;gap:52px;white-space:nowrap}
+.marquee span::after{content:"";width:14px;height:14px;background:var(--coral);border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+
+/* ---------- Sections ---------- */
+section{padding:110px 0}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:54px}
+.head h2{font-size:clamp(36px,5vw,62px);font-weight:700;letter-spacing:-.02em;margin-top:14px;max-width:720px}
+.head h2 em{color:var(--coral);font-weight:500}
+.head p{max-width:420px;color:var(--mut);margin:0}
+
+/* Especialidades */
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.spec{position:relative;background:var(--paper);border-radius:var(--r);padding:30px 28px 28px;border:1px solid var(--line);overflow:hidden;transition:transform .35s,box-shadow .35s}
+.spec:hover{transform:translateY(-6px);box-shadow:0 30px 60px -28px rgba(11,42,67,.45)}
+.spec .art{height:150px;margin:-30px -28px 22px;display:grid;place-items:center;position:relative;overflow:hidden}
+.spec .art svg{width:110px;height:110px;position:relative;z-index:1;transition:transform .5s}
+.spec:hover .art svg{transform:scale(1.08) rotate(-4deg)}
+.spec .art::after{content:"";position:absolute;inset:auto -10% -40px;height:80px;background:var(--paper);border-radius:50%}
+.a1{background:linear-gradient(135deg,#f2a07b,#e8603c)}
+.a2{background:linear-gradient(135deg,#5fc2c6,#1d8a99)}
+.a3{background:linear-gradient(135deg,#f3c97a,#d39a3a)}
+.a4{background:linear-gradient(135deg,#3f7ea5,#0f4c6e)}
+.a5{background:linear-gradient(135deg,#e88b7a,#c8402a)}
+.a6{background:linear-gradient(135deg,#7ab9a2,#2a7a5a)}
+.spec h3{font-size:26px;font-weight:700}
+.spec p{color:var(--mut);margin:8px 0 18px;font-size:16px}
+.spec .price{display:flex;align-items:baseline;justify-content:space-between;border-top:1px dashed var(--line);padding-top:14px}
+.spec .price span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.spec .price b{font:700 26px "Fraunces",serif;color:var(--navy)}
+.spec .badge{position:absolute;top:16px;right:16px;z-index:2;background:var(--navy);color:var(--gold);font:600 12px "Outfit";letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+
+/* Menú */
+.menu{background:var(--navy);color:var(--sand);position:relative;overflow:hidden}
+.menu::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 100% 0,rgba(29,138,153,.35),transparent 60%),radial-gradient(600px 400px at 0 100%,rgba(226,178,92,.12),transparent 60%)}
+.menu .wrap{position:relative}
+.menu .head p{color:#9fb3c2}
+.menu .head h2 em{color:var(--gold)}
+.tabs{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 18px;margin-bottom:26px;scrollbar-width:none;position:sticky;top:64px;z-index:5}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;display:flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;border:1.5px solid rgba(243,234,210,.2);background:rgba(6,26,43,.75);backdrop-filter:blur(8px);color:var(--sand);font:500 16px "Outfit";cursor:pointer;transition:all .2s}
+.tabs button:hover{border-color:var(--gold)}
+.tabs button.on{background:var(--gold);color:var(--deep);border-color:var(--gold);font-weight:600}
+.tabs button small{font-size:12px;opacity:.7}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px}
+.item{background:rgba(255,255,255,.04);border:1px solid rgba(243,234,210,.1);border-radius:18px;padding:22px 24px;transition:background .25s,border-color .25s;animation:fadeUp .45s both}
+.item:hover{background:rgba(255,255,255,.07);border-color:rgba(226,178,92,.4)}
+.item .row{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:23px;font-weight:700}
+.item .dots{flex:1;border-bottom:2px dotted rgba(243,234,210,.25);transform:translateY(-5px)}
+.item .from{font:700 22px "Fraunces",serif;color:var(--gold);white-space:nowrap}
+.item .from small{font:500 12px "Outfit";letter-spacing:.1em;text-transform:uppercase;color:#9fb3c2;margin-right:6px}
+.item p{margin:6px 0 0;color:#9fb3c2;font-size:15px}
+.vars{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.vars span{font-size:14px;padding:6px 12px;border-radius:999px;background:rgba(243,234,210,.08);color:#dbe4ea;white-space:nowrap}
+.vars span b{color:var(--gold);font-weight:600;margin-left:4px}
+.preps{margin-top:12px;font-size:14px;color:#9fb3c2}
+.preps b{color:var(--sand);font-weight:600}
+.menu-note{margin-top:34px;text-align:center;color:#9fb3c2;font-size:14px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* Experiencia */
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.exp-art{position:relative;aspect-ratio:1/1.05;border-radius:30px;overflow:hidden;background:linear-gradient(180deg,#1d8a99 0%,#0f4c6e 55%,#0b2a43 100%);box-shadow:0 40px 80px -30px rgba(11,42,67,.6)}
+.exp-art svg{position:absolute;inset:0;width:100%;height:100%}
+.exp-art .quote{position:absolute;left:24px;right:24px;bottom:24px;background:var(--paper);border-radius:20px;padding:20px 22px;box-shadow:0 20px 40px -16px rgba(0,0,0,.5)}
+.exp-art .quote p{margin:0;font:500 italic 19px/1.4 "Fraunces",serif}
+.exp-art .quote span{display:block;margin-top:8px;font-size:14px;color:var(--mut)}
+.feats{display:grid;gap:26px;margin-top:36px}
+.feat{display:flex;gap:18px}
+.feat i{flex:none;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:var(--navy);color:var(--gold)}
+.feat i svg{width:26px;height:26px}
+.feat h3{font-size:22px}
+.feat p{margin:4px 0 0;color:var(--mut)}
+.stats{display:flex;gap:40px;margin-top:40px;padding-top:30px;border-top:1px solid var(--line)}
+.stats b{display:block;font:900 44px/1 "Fraunces",serif;color:var(--coral)}
+.stats span{font-size:14px;color:var(--mut)}
+
+/* Visítanos */
+.visit{padding-top:0}
+.card-visit{display:grid;grid-template-columns:1fr 1.1fr;border-radius:32px;overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(11,42,67,.5)}
+.vinfo{padding:56px 52px}
+.vinfo h2{font-size:clamp(34px,4vw,52px);margin:14px 0 26px}
+.vrow{display:flex;gap:16px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.vrow:last-of-type{border-bottom:0}
+.vrow svg{flex:none;width:24px;height:24px;color:var(--coral);margin-top:3px}
+.vrow b{display:block;font-weight:600}
+.vrow span,.vrow a{color:var(--mut);text-decoration:none}
+.vrow a:hover{color:var(--coral)}
+.vinfo .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn-navy{background:var(--navy);color:var(--sand)}
+.btn-line{border:1.5px solid var(--navy);color:var(--navy);background:transparent}
+.open-now{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:6px 12px;border-radius:999px;background:#e3f3ec;color:#2a7a5a;margin-left:8px;vertical-align:middle}
+.open-now.closed{background:#fbe5df;color:var(--red)}
+.open-now::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 3px rgba(42,122,90,.2)}
+.map{min-height:460px;background:#cfe3e6;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85) contrast(1.05)}
+
+/* Footer */
+footer{background:var(--deep);color:#9fb3c2;padding:70px 0 40px;margin-top:110px;position:relative}
+footer .waves{top:-119px;bottom:auto}
+footer .waves svg{height:120px}
+.fgrid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:center}
+footer .brand b{font-size:32px}
+footer p{margin:0}
+.copy{margin-top:40px;padding-top:24px;border-top:1px solid rgba(243,234,210,.1);font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* Floating call */
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:none;align-items:center;gap:10px;background:var(--coral);color:#fff;text-decoration:none;font-weight:600;padding:14px 20px;border-radius:999px;box-shadow:0 14px 30px -8px rgba(232,96,60,.8)}
+.fab svg{width:20px;height:20px}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;text-align:left;padding-top:120px}
+  .medal{width:min(320px,74vw);order:-1;margin-bottom:10px}
+  .tag.t1{left:-14px}.tag.t2{right:-8px}
+  .specs{grid-template-columns:1fr 1fr}
+  .exp{grid-template-columns:1fr;gap:50px}
+  .card-visit{grid-template-columns:1fr}
+  .map{min-height:340px}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:80px 0}
+  .nav{position:fixed;inset:0;background:rgba(6,26,43,.97);flex-direction:column;justify-content:center;gap:12px;transform:translateY(-100%);transition:transform .35s;z-index:-1}
+  .nav.open{transform:none}
+  .nav a{font-size:24px;font-family:"Fraunces",serif}
+  .nav .btn{margin:16px 0 0;font-family:"Outfit";font-size:18px}
+  .burger{display:block}
+  .brand b{font-size:22px}
+  .brand img{width:40px;height:40px}
+  .hero .wrap{padding-bottom:120px}
+  .medal{width:min(250px,64vw)}
+  .tag{font-size:13px;padding:9px 12px}.tag i{width:30px;height:30px}.tag small{font-size:11px}
+  .tag.t1{left:-26px;bottom:6%}.tag.t2{right:-30px;top:4%}
+  .facts{gap:18px}
+  .specs,.items{grid-template-columns:1fr}
+  .item{padding:18px}
+  .item h3{font-size:20px}
+  .tabs{top:56px}
+  .vinfo{padding:36px 22px}
+  .stats{gap:22px}.stats b{font-size:34px}
+  .fab{display:inline-flex}
+  .waves svg{height:70px}
+  footer .waves{top:-69px}footer .waves svg{height:70px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="top" id="top">
+  <div class="wrap">
+    <a href="#inicio" class="brand" aria-label="El Pulpito Pirata, inicio">
+      <img src="../icon-192.png" alt="" width="46" height="46">
+      <div><b>El Pulpito Pirata</b><small>Marisquería</small></div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#especialidades">Especialidades</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#visitanos">Visítanos</a>
+      <a href="tel:+525556187180" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        Llamar
+      </a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)">Marisquería en Coyoacán</span>
+      <h1>El Pulpito Pirata<em>Sabor del mar, directo a tu mesa</em></h1>
+      <p class="lead">Cócteles bien servidos, caldos que levantan el ánimo, mojarras doraditas y pulpo preparado como en la costa. Todo hecho al momento, con mariscos frescos todos los días.</p>
+      <div class="ctas">
+        <a href="#menu" class="btn btn-gold">Ver el menú
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#visitanos" class="btn btn-ghost">Cómo llegar</a>
+      </div>
+      <div class="facts">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <p style="margin:0"><b>Todos los días</b><span>10:00 a 19:00 h</span></p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <p style="margin:0"><b>Santa Úrsula</b><span>Coyoacán, CDMX</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="medal" aria-hidden="true">
+      <div class="ring ring2"></div>
+      <div class="ring"></div>
+      <svg class="txt" viewBox="0 0 400 400"><defs><path id="circ" d="M200,200 m-182,0 a182,182 0 1,1 364,0 a182,182 0 1,1 -364,0"/></defs><text><textPath href="#circ">Mariscos frescos · Hechos al momento · Mariscos frescos · Hechos al momento ·</textPath></text></svg>
+      <div class="disc"><img src="../icon-512.png" alt=""></div>
+      <div class="tag t1"><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg></i><div>Cóctel de pulpo<small>El favorito de la casa</small></div></div>
+      <div class="tag t2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12c3-6 15-6 18 0-3 6-15 6-18 0z"/><circle cx="16" cy="11" r="1" fill="currentColor"/></svg></i><div>Pesca del día<small>Fresca, siempre</small></div></div>
+    </div>
+  </div>
+
+  <div id="bubbles" aria-hidden="true"></div>
+
+  <div class="waves" aria-hidden="true">
+    <svg class="w2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="#1d8a99" d="M0 60 C240 10 480 110 720 60 S1200 10 1440 60 S1920 110 2160 60 S2640 10 2880 60 V120 H0z"/></svg>
+    <svg class="w1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="#f3ead2" d="M0 80 C240 40 480 120 720 80 S1200 40 1440 80 S1920 120 2160 80 S2640 40 2880 80 V120 H0z"/></svg>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="marquee"></div>
+</div>
+
+<!-- ================= ESPECIALIDADES ================= -->
+<section id="especialidades">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <span class="eyebrow">Especialidades</span>
+        <h2>Lo que nos pide <em>toda la tripulación</em></h2>
+      </div>
+      <p>Recetas de la casa que llevamos años perfeccionando. Si es tu primera vez, empieza por aquí.</p>
+    </div>
+
+    <div class="specs">
+      <article class="spec rv">
+        <span class="badge">Favorito</span>
+        <div class="art a1">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#fffaf0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 58c0-20 13-34 30-34s30 14 30 34c0 8-4 12-8 14"/><path d="M38 72c-6 2-10 8-12 18"/><path d="M48 76c-2 8-6 14-14 18"/><path d="M60 78c0 8 0 16-4 22"/><path d="M72 76c2 8 6 14 14 18"/><path d="M82 72c6 2 10 8 12 18"/><path d="M38 72c8 4 36 4 44 0"/><circle cx="50" cy="52" r="5" fill="#fffaf0"/><circle cx="70" cy="52" r="5" fill="#fffaf0"/><path d="M54 63c4 3 8 3 12 0"/></svg>
+        </div>
+        <h3>Cóctel de pulpo</h3>
+        <p>Pulpo cocido en casa, jugoso y suave, con su salsa de coctel, aguacate, cebolla y cilantro.</p>
+        <div class="price"><span>Desde</span><b>$100</b></div>
+      </article>
+
+      <article class="spec rv">
+        <div class="art a2">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#fffaf0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 60c10-18 34-26 56-20 14 4 24 14 24 20s-10 16-24 20c-22 6-46-2-56-20z"/><path d="M20 60l-10-14M20 60l-10 14"/><circle cx="82" cy="56" r="4" fill="#fffaf0"/><path d="M58 44c-4 10-4 22 0 32"/><path d="M44 48c-3 8-3 16 0 24"/></svg>
+        </div>
+        <h3>Mojarra</h3>
+        <p>Frita, al mojo, a la diabla, al ajillo, empapelada o a la veracruzana. Rellena o hawaiana si vienes con hambre.</p>
+        <div class="price"><span>Desde</span><b>$190</b></div>
+      </article>
+
+      <article class="spec rv">
+        <span class="badge">15 estilos</span>
+        <div class="art a3">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#fffaf0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M86 34c-30-6-56 12-58 38-1 14 10 24 24 22 10-1 16-8 16-16"/><path d="M68 78c0-8-6-12-12-12"/><path d="M40 52l-6-6M50 42l-3-8M62 38l0-8M74 36l3-8"/><path d="M86 34c6 2 10 6 12 12"/><path d="M86 34l18-10M90 40l20-4"/><circle cx="80" cy="44" r="3" fill="#fffaf0"/></svg>
+        </div>
+        <h3>Camarones</h3>
+        <p>Al mojo, diabla, coco, crema chipotle, aguachile, rancheros, al tequila, BBQ… tú eliges el estilo.</p>
+        <div class="price"><span>Desde</span><b>$175</b></div>
+      </article>
+
+      <article class="spec rv">
+        <div class="art a4">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#fffaf0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 54h76"/><path d="M26 54c0 20 14 34 34 34s34-14 34-34"/><path d="M48 88l-4 10h32l-4-10"/><path d="M46 44c-4-6 4-10 0-18M60 42c-4-6 4-10 0-18M74 44c-4-6 4-10 0-18"/></svg>
+        </div>
+        <h3>Caldos y sopas</h3>
+        <p>Caldo de camarón, de pescado o combinado con almeja y jaiba. El remedio perfecto para cualquier día.</p>
+        <div class="price"><span>Desde</span><b>$76</b></div>
+      </article>
+
+      <article class="spec rv">
+        <span class="badge">Para la cruda</span>
+        <div class="art a5">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#fffaf0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 30h60l-8 62a6 6 0 0 1-6 5H44a6 6 0 0 1-6-5z"/><path d="M32 46h56"/><circle cx="50" cy="62" r="5"/><circle cx="68" cy="72" r="4"/><circle cx="56" cy="82" r="3"/><path d="M80 30l12-14"/><path d="M84 26c6 0 10 2 12 6"/></svg>
+        </div>
+        <h3>Vuelve a la vida</h3>
+        <p>Camarón, pulpo, ostión y más mariscos en su copa bien cargada. Su nombre lo dice todo.</p>
+        <div class="price"><span>Desde</span><b>$125</b></div>
+      </article>
+
+      <article class="spec rv">
+        <div class="art a6">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#fffaf0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="60" r="36"/><circle cx="60" cy="60" r="26"/><path d="M48 52c4-2 6 2 10 0M62 58c4-2 6 2 10 0M50 68c4-2 6 2 10 0"/><circle cx="68" cy="48" r="3" fill="#fffaf0"/><circle cx="52" cy="60" r="2" fill="#fffaf0"/></svg>
+        </div>
+        <h3>Tostadas</h3>
+        <p>De camarón, ceviche, pulpo, jaiba, marlin, atún o campechana. Crujientes, frescas y bien servidas.</p>
+        <div class="price"><span>Desde</span><b>$52</b></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENÚ ================= -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">Nuestra carta</span>
+        <h2>El menú <em>completo</em></h2>
+      </div>
+      <p>Precios en pesos mexicanos, IVA incluido. Pregunta por la pesca del día y por los preparados de la casa.</p>
+    </div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="items" id="items"></div>
+    <p class="menu-note">Los precios pueden cambiar sin previo aviso. ¿Alguna alergia? Avísanos y lo preparamos a tu gusto.</p>
+  </div>
+</section>
+
+<!-- ================= NOSOTROS ================= -->
+<section id="nosotros">
+  <div class="wrap exp">
+    <div class="exp-art rv" aria-hidden="true">
+      <svg viewBox="0 0 400 420" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="sun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffe2a8"/><stop offset="1" stop-color="#e2b25c" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="300" cy="90" r="90" fill="url(#sun)"/>
+        <circle cx="300" cy="90" r="34" fill="#ffe2a8"/>
+        <!-- barco pirata -->
+        <g transform="translate(70 120)">
+          <path d="M20 120h180l-24 40H44z" fill="#3b2414"/>
+          <path d="M28 128h164" stroke="#e2b25c" stroke-width="3"/>
+          <path d="M108 120V10" stroke="#3b2414" stroke-width="6"/>
+          <path d="M112 18c40 10 52 40 48 92H112z" fill="#f3ead2"/>
+          <path d="M104 30c-30 10-44 36-42 80h42z" fill="#fffaf0"/>
+          <path d="M108 10h34l-6 8 6 8h-34z" fill="#0b2a43"/>
+          <circle cx="122" cy="17" r="3" fill="#fffaf0"/>
+          <circle cx="62" cy="140" r="5" fill="#e2b25c"/><circle cx="96" cy="140" r="5" fill="#e2b25c"/><circle cx="130" cy="140" r="5" fill="#e2b25c"/><circle cx="164" cy="140" r="5" fill="#e2b25c"/>
+        </g>
+        <path d="M0 270 C60 250 120 290 200 270 S340 250 400 270 V420 H0z" fill="#0f4c6e"/>
+        <path d="M0 300 C70 280 130 320 200 300 S330 280 400 300 V420 H0z" fill="#0b2a43"/>
+        <!-- peces -->
+        <g fill="#e2b25c" opacity=".85">
+          <path d="M70 340c10-8 26-8 34 0-8 8-24 8-34 0zm34 0l10-7v14z"/>
+          <path d="M250 370c8-6 20-6 26 0-6 6-18 6-26 0zm26 0l8-5v10z"/>
+        </g>
+        <g fill="none" stroke="#f3ead2" stroke-opacity=".35" stroke-width="2">
+          <circle cx="120" cy="320" r="4"/><circle cx="130" cy="305" r="6"/><circle cx="300" cy="330" r="5"/>
+        </g>
+      </svg>
+      <div class="quote">
+        <p>“Aquí el marisco se respeta: fresco, bien servido y preparado en el momento.”</p>
+        <span>— La cocina de El Pulpito Pirata</span>
+      </div>
+    </div>
+
+    <div class="rv">
+      <span class="eyebrow">Nosotros</span>
+      <h2 style="font-size:clamp(36px,5vw,58px);margin-top:14px;letter-spacing:-.02em">Una marisquería de barrio con <em style="color:var(--coral);font-weight:500">alma de puerto</em></h2>
+      <p style="color:var(--mut);margin-top:18px">En El Pulpito Pirata cocinamos como se hace en la costa: con producto fresco, salsas hechas en casa y porciones generosas. Ven con la familia, con los amigos o solo por tu caldo de los domingos.</p>
+
+      <div class="feats">
+        <div class="feat">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c3-5 13-7 18-2l2-3v10l-2-3c-5 5-15 3-18-2z"/><circle cx="16" cy="11" r="1" fill="currentColor"/></svg></i>
+          <div><h3>Producto fresco</h3><p>Mariscos y pescado que llegan cada día y se preparan al momento de tu pedido.</p></div>
+        </div>
+        <div class="feat">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.9A6 6 0 0 1 12 4a6 6 0 0 1 6 9.9V20H6z"/><path d="M6 17h12"/></svg></i>
+          <div><h3>Recetas de la casa</h3><p>Agua bendita, combinado y salsas preparadas por nuestra cocina. Ese sabor no lo encuentras en otro lado.</p></div>
+        </div>
+        <div class="feat">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 7-4.6"/></svg></i>
+          <div><h3>Para toda la tripulación</h3><p>También hay pollo, res y opciones para los que no son de mariscos. Nadie se queda sin comer.</p></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><b id="nPlat">60+</b><span>platillos y variantes</span></div>
+        <div><b>7</b><span>días a la semana</span></div>
+        <div><b>100%</b><span>hecho al momento</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISÍTANOS ================= -->
+<section class="visit" id="visitanos">
+  <div class="wrap">
+    <div class="card-visit rv">
+      <div class="vinfo">
+        <span class="eyebrow">Visítanos</span>
+        <h2>Te esperamos a bordo</h2>
+
+        <div class="vrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><b>Dirección</b><span>Av. Santa Úrsula / Santo Tomás 648-L 5, Pedregal de Santa Úrsula, Coyoacán, CDMX</span></div>
+        </div>
+        <div class="vrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b>Horario <span class="open-now" id="openNow" hidden></span></b><span>Lunes a domingo · 10:00 a 19:00 h</span></div>
+        </div>
+        <div class="vrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          <div><b>Teléfono</b><a href="tel:+525556187180">55 5618 7180</a></div>
+        </div>
+
+        <div class="ctas">
+          <a class="btn btn-navy" href="https://www.google.com/maps/search/?api=1&query=Santo+Tom%C3%A1s+648+Pedregal+de+Santa+%C3%9Arsula+Coyoac%C3%A1n+CDMX" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+            Cómo llegar
+          </a>
+          <a class="btn btn-line" href="tel:+525556187180">Llamar ahora</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Mapa de El Pulpito Pirata" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Santo%20Tom%C3%A1s%20648%2C%20Pedregal%20de%20Santa%20%C3%9Arsula%2C%20Coyoac%C3%A1n%2C%20CDMX&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="waves" aria-hidden="true">
+    <svg class="w1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="#061a2b" d="M0 80 C240 40 480 120 720 80 S1200 40 1440 80 S1920 120 2160 80 S2640 40 2880 80 V120 H0z"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="brand"><img src="../icon-192.png" alt="" width="46" height="46"><div><b>El Pulpito Pirata</b><small>Sabor del mar, directo a tu mesa</small></div></div>
+      <p>Pedregal de Santa Úrsula, Coyoacán · <a href="tel:+525556187180" style="color:var(--gold);text-decoration:none">55 5618 7180</a></p>
+    </div>
+    <div class="copy">
+      <span>© <span id="yr"></span> El Pulpito Pirata · Marisquería</span>
+      <span>Abierto todos los días de 10:00 a 19:00</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+525556187180" class="fab" aria-label="Llamar al restaurante">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  Llamar
+</a>
+
+<script>
+// Menú tomado de la carta del POS (precios en MXN).
+// v: "Variante:precio|..." · ":precio" = precio único · p: preparaciones disponibles
+const MENU={
+ "Entradas":[
+  {n:"Pescaditos fritos",d:"Doraditos y crujientes, para abrir boca.",v:"Uno:28|Orden de dos:56|Orden de tres:84"},
+  {n:"Quesadillas",d:"Fritas, con queso y el marisco que elijas.",v:"Camarón:23|Pescado:23|Pulpo:32|Jaiba:32|Marlin:32|Especial:32"},
+  {n:"Tostadas",d:"Con pico de gallo, aguacate y mayonesa.",v:"Camarón:52|Ceviche:52|Jaiba:52|Marlin:52|Atún:52|Pulpo:65|Campechana:75"},
+  {n:"Empanadas",d:"Rellenas y bien doradas.",v:"Camarón:55|Atún:55|Pulpo:65|Hawaiana:75|Campechana:75"},
+  {n:"Para acompañar",d:"Lo que no puede faltar en la mesa.",v:"Papas:38|Aguacate:27|Almejas:59|Ensalada verde:85"}
+ ],
+ "Cócteles":[
+  {n:"Cóctel de camarón",d:"El clásico, con su salsa de coctel, aguacate, cebolla y cilantro.",v:"Chico:75|Grande:115|Bola:182"},
+  {n:"Cóctel campechano",d:"Mezcla de mariscos a tu gusto: camarón, pulpo, ostión, jaiba…",v:"Chico:75|Grande:115|Bola:182"},
+  {n:"Cóctel de ceviche",d:"Pescado curado en limón con pico de gallo.",v:"Chico:75|Grande:115|Bola:182"},
+  {n:"Cóctel de jaiba",d:"Pulpa de jaiba fresca y jugosa.",v:"Chico:75|Grande:115|Bola:182"},
+  {n:"Cóctel de pulpo",d:"Pulpo cocido en casa, suave y lleno de sabor.",v:"Chico:100|Grande:165|Bola:225",star:1},
+  {n:"Vuelve a la vida",d:"Copa cargada de mariscos variados.",v:"Chico:125|Grande:180"},
+  {n:"Ostiones",d:"En su concha, Rockefeller o a la diabla.",v:"Concha media:63|Concha orden:100|Rockefeller media:80|Rockefeller orden:135|A la diabla:127|Rasurados:141"},
+  {n:"Pata de mula",d:"Para los conocedores.",v:"Media orden:90|Orden:150"}
+ ],
+ "Caldos":[
+  {n:"Caldo de camarón",d:"Con almeja y jaiba, como debe ser.",v:"Chico:76|Grande:115"},
+  {n:"Caldo de pescado",d:"Ligero, sabroso y reconfortante.",v:"Chico:76|Grande:115"},
+  {n:"Caldo combinado",d:"Camarón, pescado, almeja y jaiba en un mismo plato.",v:"Chico:95|Grande:155",star:1},
+  {n:"Consomé",d:"Para calentar el cuerpo.",v:"Solo:24|Con almeja:30|Con jaiba:46|Almeja y jaiba:55"},
+  {n:"Sopas",d:"Sopa de mariscos o de tortilla marisqueña.",v:"De mariscos:200|Tortilla marisqueña:156"}
+ ],
+ "Platillos":[
+  {n:"Mojarra",d:"Acompañada de arroz y ensalada.",v:"Mediana:190|Grande:255|Rellena:250|Hawaiana:225",p:"Frita, al mojo, diabla, ajillo, mantequilla, enchilada, empapelada, veracruz",star:1},
+  {n:"Camarones",d:"Con arroz y ensalada, en el estilo que prefieras.",v:"Orden:175|Brochetas:175|Hawaiana:200|Reyna:210|Combinado:215",p:"Empanizados, mojo, diabla, coco, ajillo, crema chipotle, aguachile, enchilados, plancha, rancheros, tequila, cucaracha, BBQ"},
+  {n:"Pulpo",d:"Tierno y bien sazonado.",v:"Orden:200",p:"Al mojo, en su tinta, enamorado, diabla, encebollado, ajillo, mantequilla"},
+  {n:"Filete de pescado",d:"Con arroz y ensalada.",v:"Orden:125|Veracruz:140|Hawaiano:140|Relleno:165|Papillón:160",p:"Empanizado, mojo, finas hierbas, enchilado, ajillo, diabla, plancha"},
+  {n:"Paella",d:"Arroz con mariscos para compartir.",v:"Chica:172|Grande:240"},
+  {n:"Arroz",d:"Solo o con mariscos.",v:"Solo:22|Con plátano:32|Con almeja:95|Con camarón:165|A la tumbada:175|Con mariscos:190|Con pulpo:190"},
+  {n:"Alambres",d:"Con tocino, queso y morrón.",v:"De pollo:120|De res:140|De pescado:147|De camarón:202|De mariscos:202"},
+  {n:"Especiales de mariscos",d:"Creaciones de la casa.",v:"Omelet:105|Queso fundido:108|Espagueti:140|Ensalada:162|Encazuelada:198"},
+  {n:"Jaibas",d:"Al mojo de ajo o rellenas.",v:"Al mojo de ajo:105|Rellenas:165"},
+  {n:"Chiles",d:"Rellenos de mariscos.",v:"De tres:128|Rellenos:147|En nogada:178"},
+  {n:"Aguacate relleno",d:"Fresco y ligero.",v:"De camarón:100|De atún:100|Uno y uno:100"},
+  {n:"Sincronizadas",d:"Con queso derretido.",v:"De camarón:105|Hawaianas:131"},
+  {n:"Pollo y res",d:"Para los que no son de mar.",v:"Pechuga asada:110|Pechuga empanizada:110|Bistec asado:118|Milanesa:130"}
+ ],
+ "Bebidas":[
+  {n:"Aguas frescas",d:"Jamaica, horchata, tamarindo o piña.",v:"Vaso:35|Jarra 1 L:55|Jarra 2 L:85|Botella de agua:23"},
+  {n:"Refrescos",d:"Coca-Cola, Sidral, Tehuacán, Sangría, Boing, Squirt, Fanta, Sprite.",v:"Refresco:32|Preparado:42"},
+  {n:"Jugos y limonadas",d:"Recién hechos.",v:"Limonada:44|Naranjada:44|Clamato:44|Jugo:53|Piñada:53"},
+  {n:"Cervezas",d:"Bien frías. Pídela michelada o preparada.",v:"Victoria:47|Corona:47|Pacífico:52|Negra Modelo:52|Modelo Especial:52|Michelada:+8"},
+  {n:"Vino",d:"Para acompañar tus mariscos.",v:"Copa:63|Botella:250"},
+  {n:"Café",d:"Café de olla o té.",v:"Café de olla:27|Té:27"}
+ ],
+ "Postres":[
+  {n:"Plátanos fritos",d:"Con crema, con lechera o con todo.",v:"Orden:48"},
+  {n:"Postres de la casa",d:"Un final dulce.",v:"Duraznos en almíbar:48|Flan napolitano:48|Chongos zamoranos:48"}
+ ]
+};
+
+const $=s=>document.querySelector(s);
+const parse=v=>v.split("|").map(x=>{const i=x.lastIndexOf(":");return{n:x.slice(0,i),p:x.slice(i+1)}});
+const fmt=p=>p.startsWith("+")?"+$"+p.slice(1):"$"+p;
+const minP=v=>Math.min(...parse(v).filter(x=>!x.p.startsWith("+")).map(x=>+x.p));
+
+// Tabs + items
+const cats=Object.keys(MENU);let cur=cats[0];
+function drawTabs(){
+  $("#tabs").innerHTML=cats.map(c=>`<button role="tab" aria-selected="${c==cur}" class="${c==cur?"on":""}" data-c="${c}">${c} <small>${MENU[c].length}</small></button>`).join("");
+}
+function drawItems(){
+  $("#items").innerHTML=MENU[cur].map((it,i)=>{
+    const vs=parse(it.v),one=vs.length==1;
+    return `<article class="item" style="animation-delay:${i*40}ms">
+      <div class="row"><h3>${it.n}${it.star?' <span title="Recomendado" style="color:var(--gold)">★</span>':""}</h3><span class="dots"></span>
+      <span class="from">${one?"":"<small>desde</small>"}$${minP(it.v)}</span></div>
+      <p>${it.d}</p>
+      ${one?"":`<div class="vars">${vs.map(x=>`<span>${x.n}<b>${fmt(x.p)}</b></span>`).join("")}</div>`}
+      ${it.p?`<div class="preps"><b>Estilos:</b> ${it.p}</div>`:""}
+    </article>`}).join("");
+}
+$("#tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cur=b.dataset.c;drawTabs();drawItems();
+  const m=$("#menu").getBoundingClientRect().top;if(m<-200)$("#menu").scrollIntoView({behavior:"smooth"})});
+drawTabs();drawItems();
+$("#nPlat").textContent=Object.values(MENU).flat().reduce((a,x)=>a+parse(x.v).length,0)+"+";
+
+// Marquee
+const words=["Cóctel de pulpo","Mojarra al mojo","Camarones a la diabla","Caldo combinado","Vuelve a la vida","Tostadas de ceviche","Pulpo enamorado","Aguachile","Ostiones Rockefeller","Paella"];
+const row=words.map(w=>`<span>${w}</span>`).join("");$("#marquee").innerHTML=row+row;
+
+// Burbujas
+const bb=$("#bubbles");
+for(let i=0;i<16;i++){const s=6+Math.random()*22,d=document.createElement("span");d.className="bubble";
+  d.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;animation-duration:${9+Math.random()*12}s;animation-delay:${-Math.random()*20}s`;bb.appendChild(d)}
+
+// Header sólido al hacer scroll
+const hdr=$("#top");const onS=()=>hdr.classList.toggle("solid",scrollY>40);addEventListener("scroll",onS,{passive:true});onS();
+
+// Menú móvil
+const nav=$("#nav"),bur=$("#burger");
+bur.onclick=()=>{const o=nav.classList.toggle("open");bur.setAttribute("aria-expanded",o)};
+nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("open");bur.setAttribute("aria-expanded",false)}});
+
+// Animaciones al aparecer
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach((el,i)=>{el.style.transitionDelay=(el.classList.contains("spec")?(i%3)*90:0)+"ms";io.observe(el)});
+
+// Abierto ahora (hora de CDMX)
+try{const h=+new Intl.DateTimeFormat("es-MX",{hour:"numeric",hourCycle:"h23",timeZone:"America/Mexico_City"}).format(new Date());
+  const o=h>=10&&h<19,el=$("#openNow");el.hidden=false;el.textContent=o?"Abierto ahora":"Cerrado ahora";if(!o)el.classList.add("closed")}catch(e){}
+$("#yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
