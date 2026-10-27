@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-27 — conversación del curso de administración (v51)
+- Recetas y costos: los ingredientes que son preparación (Caldo base, Sazón) muestran el botón «Ver preparación», que lleva a su ficha en Preparaciones.
+- El buscador de recetas también encuentra las preparaciones con costo (por nombre o por ingrediente, p. ej. «jitomate»).
+
 ## 2026-10-27 — conversación del curso de administración (v50)
 - Preparaciones con costo (sub-recetas): «※ Sazón» (rinde 14 L: jitomate, cebolla, ajo, guajillo, puré de tomate, poro, apio, aceite) y «※ Caldo base» (rinde 15 L: cabeza de camarón, epazote, retazo, sazonador, sal y 3.5 L de sazón), tomadas del Excel de costos. En Recetas y costos → Preparaciones se ve el costo por tanda y por litro, y se pueden editar cantidades, rendimiento e insumos (se guarda en config/prepc).
 - Las preparaciones se pueden usar como ingrediente en cualquier receta; al vender, el inventario descuenta sus insumos crudos en proporción (`expP`).
