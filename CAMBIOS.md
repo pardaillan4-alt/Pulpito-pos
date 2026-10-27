@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-27 — conversación del desarrollo de la app (v48)
+- Recetas y costos: al editar una receta, tocar un insumo carga su cantidad para modificarla directo; el buscador de insumo es un cuadro de texto (escribe una letra y encuentra el más cercano, sin acentos).
+
 ## 2026-10-27 — conversación del curso de administración (v47)
 - Quesadilla: la variante «Esp/otro» se divide en «Esp/pescado», «Esp/marlin» y «Esp/jaiba» ($32 cada una) para que el inventario descuente el marisco correcto. Receta inicial: 28 g del marisco + 12 g de queso Oaxaca (pendiente de pesar en cocina).
 - Toda quesadilla descuenta 1 tortilla de maíz (50 g si el insumo está en kg, 1 pieza si está en piezas), aunque su receta guardada no la tenga.
