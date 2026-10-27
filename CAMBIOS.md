@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-27 — conversación del curso de administración (v50)
+- Preparaciones con costo (sub-recetas): «※ Sazón» (rinde 14 L: jitomate, cebolla, ajo, guajillo, puré de tomate, poro, apio, aceite) y «※ Caldo base» (rinde 15 L: cabeza de camarón, epazote, retazo, sazonador, sal y 3.5 L de sazón), tomadas del Excel de costos. En Recetas y costos → Preparaciones se ve el costo por tanda y por litro, y se pueden editar cantidades, rendimiento e insumos (se guarda en config/prepc).
+- Las preparaciones se pueden usar como ingrediente en cualquier receta; al vender, el inventario descuenta sus insumos crudos en proporción (`expP`).
+- Caldos, consomés y sopas agregan solos el caldo base si su receta no lo trae: caldo de camarón y de pescado 0.45/0.75 L, combinado 0.4/0.7 L, consomé 0.5 (solo) y 0.45 L, sopas 0.65/0.75 L (`CALDO0`).
+
 ## 2026-10-27 — conversación del curso de administración (v49)
 - Cóctel campechano: la opción elegida cambia el marisco que se descuenta. Sin opción o «Cam/ost» = camarón + ostión; «Cam/pul» = camarón + pulpo; «Jaiba», «Surimi» y «Ceviche» (raspa) reemplazan al ostión. Si se eligen varias, se reparte la porción entre ellas. Aplica a chico, grande y bola (`SUBM`, `subM`).
 - El costo por línea de la ingeniería de menú toma en cuenta esas opciones.
