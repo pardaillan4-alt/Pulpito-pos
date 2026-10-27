@@ -62,7 +62,7 @@ const PM="Sin harina|Plancha|Con plátano+10|Preparado 1+6|Preparado 2+12|Prepar
 I("Pescadito",E,"Fritos",12,":28",PM);
 I("Orden de dos pescaditos",E,"Fritos",12,":56",PM);
 I("Orden de tres pescaditos",E,"Fritos",12,":84",PM);
-I("Quesadilla",E,"Fritos",8,"Camarón:23|Pescado:23|Esp/cam:32|Esp/pul:32|Esp/otro:32|Pulpo:32|Jaiba:32|Marlin:32","Sin verdura|Sin mayonesa|Sin pico|Sin aguacate");
+I("Quesadilla",E,"Fritos",8,"Camarón:23|Pescado:23|Esp/cam:32|Esp/pul:32|Esp/pescado:32|Esp/marlin:32|Esp/jaiba:32|Pulpo:32|Jaiba:32|Marlin:32","Sin verdura|Sin mayonesa|Sin pico|Sin aguacate");
 I("Tostada",E,"Barra",5,"Camarón:52|Ceviche:52|Pulpo:65|Jaiba:52|Marlin:52|Atún:52|Campechano:75","Sin pico|Sin mayonesa|Sin aguacate|Sin lechuga");
 I("Empanada",E,"Barra",10,"Camarón:55|Pulpo:65|Atún:55|Hawaiana:75|Campechana:75","Sin verdura|Sin aguacate|Sin mayonesa");
 I("Orden de",E,"Fritos",6,"Papas:38|Aguacate:27|Almeja:59|Ensalada verde:85|Tortillas de maíz:0|Tortillas de harina:0|Salsa casera:0|Salsa diabla:0|Ajo picado:0|Habanero:0");
@@ -315,7 +315,7 @@ function pedido(){const pd=S.lin.filter(l=>l.mesa==S.mesa).sort((a,b)=>a.at-b.at
  return `<div class="tk"><b>Lo pedido hasta ahora</b>${pd.map(l=>`<div class="row"><span>${l.txt}<br><small class="mut">${new Date(l.at).toLocaleTimeString("es-MX",{hour:"2-digit",minute:"2-digit",timeZone:"America/Mexico_City"})} · ${l.ent?"entregado":l.done?"listo":"en cocina"}</small></span><span>${pr(l.p)} <button class="chip" onclick="anular('${l.id}')">Anular</button></span></div>`).join("")||'<p class="mut">Aún nada enviado.</p>'}<div class="row"><b>Subtotal</b><b>${pr(ps)}</b></div>${can("anular")&&pd.length?(S.cfT==S.mesa?`<button class="chip" style="background:var(--bad);color:#fff" onclick="anTodo()">Sí, anular TODO</button> <button class="chip" onclick="S.cfT='';draw()">No</button> `:`<button class="chip" style="background:var(--bad);color:#fff" onclick="S.cfT=S.mesa;draw()">Anular todo el pedido</button> `):""}<button class="chip" onclick="rcom(0)">Reimprimir última comanda</button> <button class="chip" onclick="rcom(1)">Reimprimir todo</button></div>`}
 const RC={
 "Pescadito":[["Pescadito",1]],"Orden de dos pescaditos":[["Pescadito",2]],"Orden de tres pescaditos":[["Pescadito",3]],
-"Quesadilla":[["Pacotilla",[.028,0,.028,0,0,0,0,0]],["Raspa",[0,.05,0,0,0,0,0,0]],["Pulpo",[0,0,0,.028,0,.028,0,0]],["Pulpa de jaiba",[0,0,0,0,0,0,.028,0]],["Marlin",[0,0,0,0,0,0,0,.028]],["Queso Oaxaca",[0,0,.012,.012,.012,.012,.012,0]]],
+"Quesadilla":[["Pacotilla",[.028,0,.028,0,0,0,0,0,0,0]],["Raspa",[0,.05,0,0,.028,0,0,0,0,0]],["Pulpo",[0,0,0,.028,0,0,0,.028,0,0]],["Pulpa de jaiba",[0,0,0,0,0,0,.028,0,.028,0]],["Marlin",[0,0,0,0,0,.028,0,0,0,.028]],["Queso Oaxaca",[0,0,.012,.012,.012,.012,.012,.012,.012,0]]],
 "Tostada":[["Pacotilla",[.08,0,0,0,0,0,.05]],["Pulpo",[0,0,.08,0,0,0,.05]],["Pulpa de jaiba",[0,0,0,.08,0,0,0]],["Aguacate",.05]],
 "Empanada":[["Pacotilla",[.024,0,0,0,0]],["Pulpo",[0,.09,0,0,.02]],["Aguacate",.02],["Queso Oaxaca",[0,0,0,.01,0]]],
 "Aguacate relleno":[["Pacotilla",[.09,0,.045]],["Aguacate",.26]],
@@ -431,7 +431,7 @@ function edoRes(r,tot){const K=r.k||[],I={},O={},ad=(c,v)=>{const o=GCO.includes
  r.m.filter(m=>m.tipo=="gasto").forEach(m=>{const c=mcat(m,K);if(c!=GPC)return ad(c,m.m);pg+=m.m;const T={};K.filter(x=>Math.abs(x.at-m.at)<48*36e5).forEach(x=>{const g=icG(icat(x.n));T[g]=(T[g]||0)+(+x.c||0)});const st=Object.values(T).reduce((a,v)=>a+v,0);
   if(st>0)Object.entries(T).forEach(([g,v])=>ad(g,m.m*v/st));else ad("Mariscos y pescado",m.m)});
  const sm=o=>Object.values(o).reduce((a,v)=>a+v,0);return{I,O,gi:sm(I),go:sm(O),pg,kt:K.reduce((a,x)=>a+(+x.c||0),0)}}
-function cLin(l){const it=M.find(x=>x.n==l.n);if(!it)return null;let t=l.txt.replace(/^\d+× /,"");if(t.startsWith(it.n+" "))t=t.slice(it.n.length+1);let vi=l.vi!=null&&it.v[l.vi]?l.vi:-1,bl=vi>=0?1e9:-1;it.v.forEach((v,j)=>{if(v[0]&&t.startsWith(v[0])&&v[0].length>bl){vi=j;bl=v[0].length}});if(vi<0)vi=it.v.length==1?0:it.v.findIndex(v=>!v[0]);if(vi<0)return null;const rc=recDe(it,vi);if(!rc.length)return null;const q=+(l.txt.match(/^(\d+)×/)||[0,1])[1];return rc.reduce((a,[i,x])=>a+x*costo(i),0)*(1+(+S.ot[it.n+"|"+it.v[vi][0]]||0)/100)*q}
+function cLin(l){const it=M.find(x=>x.n==l.n);if(!it)return null;let t=l.txt.replace(/^\d+× /,"");if(t.startsWith(it.n+" "))t=t.slice(it.n.length+1);let vi=l.vi!=null&&it.v[l.vi]&&(!it.v[l.vi][0]||t.startsWith(it.v[l.vi][0]))?l.vi:-1,bl=vi>=0?1e9:-1;it.v.forEach((v,j)=>{if(v[0]&&t.startsWith(v[0])&&v[0].length>bl){vi=j;bl=v[0].length}});if(vi<0)vi=it.v.length==1?0:it.v.findIndex(v=>!v[0]);if(vi<0)return null;const rc=recDe(it,vi);if(!rc.length)return null;const q=+(l.txt.match(/^(\d+)×/)||[0,1])[1];return rc.reduce((a,[i,x])=>a+x*costo(i),0)*(1+(+S.ot[it.n+"|"+it.v[vi][0]]||0)/100)*q}
 function ingMenu(H){const G={},O=["Estrella","Caballo","Rompecabezas","Perro"],E={Estrella:"⭐ Estrella",Caballo:"🐴 Caballo de batalla",Rompecabezas:"🧩 Rompecabezas",Perro:"🐶 Perro"};
  H.filter(l=>!l.cort).forEach(l=>{const c=cLin(l);if(c==null)return;const q=+(l.txt.match(/^(\d+)×/)||[0,1])[1],g=(G[l.c]=G[l.c]||{}),x=(g[l.n]=g[l.n]||{q:0,v:0,c:0});x.q+=q;x.v+=l.p;x.c+=c});
  const B=CAT.filter(c=>G[c]&&Object.keys(G[c]).length>1).map(c=>{const A=Object.entries(G[c]),N=A.reduce((a,[,x])=>a+x.q,0),am=A.reduce((a,[,x])=>a+x.v-x.c,0)/N,th=.7/A.length;
@@ -499,7 +499,9 @@ Object.entries(RC).forEach(([k,r])=>{if(r.some(x=>x[0]=="Calamar rojo"))return;c
 /* Camarón pelado: en vez del camarón de caldo/orden se descuenta Pacotilla (kg). rm = insumos que ya no se usan; add = Pacotilla por variante (o "=" mismo peso que el camarón sustituido) */
 const PEL={"Caldo de camarón":{rm:["Camarón para caldo"],add:[.09,.18]},"Caldo de pescado":{rm:[],add:[.09,.18]},"Caldo combinado":{rm:["Camarón para caldo"],add:"="},"Sopas":{rm:["Camarón para caldo"],add:"="},"Camarones":{rm:["Camarón para orden"],add:[.2]}},
 esPel=(it,ms)=>!!ms&&ms.some(m=>/pelado/i.test(m)||(it.n=="Camarones"&&m=="Aguachile"));
-function recDe(it,vi,ms){const k=it.n+"|"+(it.v[vi]?it.v[vi][0]:"");let r=S.rec[k]||(RC[it.n]||[]).map(([i,q])=>[i,Array.isArray(q)?q[Math.min(vi,q.length-1)]:q]).filter(x=>x[1]>0);
+const torN=()=>{const t=INS.find(i=>/tortillas? de ma[ií]z/i.test(i[0]));return t?[t[0],/kg/i.test(t[1])?.05:1]:null};
+function recDe(it,vi,ms){let r=recDe0(it,vi,ms);if(it.n=="Quesadilla"&&!r.some(([i])=>/tortilla/i.test(i))){const t=torN();if(t)r=r.concat([t])}return r}
+function recDe0(it,vi,ms){const k=it.n+"|"+(it.v[vi]?it.v[vi][0]:"");let r=S.rec[k]||(RC[it.n]||[]).map(([i,q])=>[i,Array.isArray(q)?q[Math.min(vi,q.length-1)]:q]).filter(x=>x[1]>0);
  const pl=PEL[it.n];if(pl&&esPel(it,ms)){let eq=0;r=r.filter(([i,q])=>{if(pl.rm.includes(i)){eq+=q;return false}return true});const a=pl.add=="="?eq:pl.add[Math.min(vi,pl.add.length-1)];if(a>0){const j=r.findIndex(x=>x[0]=="Pacotilla");if(j>=0)r=r.map((x,n)=>n==j?[x[0],+(x[1]+a).toFixed(3)]:x);else r=r.concat([["Pacotilla",a]])}}return r}
 function gasto(l){const it=M.find(x=>x.n==l.n);if(!it)return;recDe(it,l.vi||0,l.ms).forEach(([i,q])=>{const k=INS.findIndex(x=>x[0]==i),d=S.inv[i];if(!d||k<0)return;d.q=Math.max(0,+(d.q-q*(l.q||1)).toFixed(3));DB&&DB.collection("insumos").doc(dk(k)).update({q:d.q}).catch(()=>{})})}
 function apProd(){for(let i=M.length-1;i>=0;i--)if(M[i].custom)M.splice(i,1);S.prod.forEach(p=>M.push({n:p.n,c:p.c,s:p.s,t:p.t||10,v:p.v.map(x=>[x.l,x.p]),m:p.m&&p.m.length?p.m:null,custom:1}))}

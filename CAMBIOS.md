@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-10-27 — conversación del curso de administración (v47)
+- Quesadilla: la variante «Esp/otro» se divide en «Esp/pescado», «Esp/marlin» y «Esp/jaiba» ($32 cada una) para que el inventario descuente el marisco correcto. Receta inicial: 28 g del marisco + 12 g de queso Oaxaca (pendiente de pesar en cocina).
+- Toda quesadilla descuenta 1 tortilla de maíz (50 g si el insumo está en kg, 1 pieza si está en piezas), aunque su receta guardada no la tenga.
+- Recetas por defecto de la quesadilla realineadas al nuevo orden de variantes.
+- Ingeniería de menú: solo usa la variante guardada en la línea si coincide con el texto del ticket (las ventas viejas no se confunden al cambiar variantes).
+
 ## 2026-10-27 — conversación del curso de administración (v46)
 - Cortesías y consumo interno: al agregar un platillo se puede marcar «🎁 Cortesía / consumo interno» (cortesía a cliente, consumo del personal, uso en cocina). Se cobra en $0, descuenta inventario, pide NIP de administrador y aparece en el reporte.
 - Ingeniería de menú: reconoce la variante sin nombre (p. ej. «Camarones» cualquier preparación) y usa la variante guardada en la línea; antes contaba de menos.
