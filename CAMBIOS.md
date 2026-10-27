@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-27 — conversación del curso de administración (v49)
+- Cóctel campechano: la opción elegida cambia el marisco que se descuenta. Sin opción o «Cam/ost» = camarón + ostión; «Cam/pul» = camarón + pulpo; «Jaiba», «Surimi» y «Ceviche» (raspa) reemplazan al ostión. Si se eligen varias, se reparte la porción entre ellas. Aplica a chico, grande y bola (`SUBM`, `subM`).
+- El costo por línea de la ingeniería de menú toma en cuenta esas opciones.
+
 ## 2026-10-27 — conversación del desarrollo de la app (v48)
 - Recetas y costos: al editar una receta, tocar un insumo carga su cantidad para modificarla directo; el buscador de insumo es un cuadro de texto (escribe una letra y encuentra el más cercano, sin acentos).
 
