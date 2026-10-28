@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v61)
+- Compra manual en Inventario: ahora pregunta cómo se pagó (de la caja / aparte / ya registrada) y genera sola el gasto «Pago de compra» (mismo tratamiento que importar compras, así no se cuenta doble en el estado de resultados ni en el control de compras).
+- Gasto en caja: campo opcional «¿Es compra de inventario?» (insumo + cantidad) que además suma a las existencias y registra la compra; ese gasto se guarda como «Pago de compra».
+- Al registrar compras en inventario ya no se pierden el clasificador ni el nombre del concepto (se conserva el resto de sus datos).
+
 ## 2026-10-28 — Salsas por estilo, editables (conversación del curso)
 - Nueva tarjeta **🌶️ Salsas por estilo** al inicio de Recetas y costos → Preparaciones: si la variante o una opción del platillo contiene la palabra, se descuenta la porción de la preparación. Se guarda en la nube (`config/salsas`) y se puede editar (palabra, preparación, cantidad, agregar/quitar).
 - Valores iniciales: Diabla → salsa diabla 100 ml; Mojo → ajo dorado 30 g; Veracruz → salsa Veracruz 100 g; En su tinta → tinta de pulpo 100 ml; BBQ → salsa BBQ 100 ml; Enchilado/a → salsa guajillo 100 ml; Ranchero → salsa casera 100 g (`SALSA0`, `SALSAS`, `salsaR`).
