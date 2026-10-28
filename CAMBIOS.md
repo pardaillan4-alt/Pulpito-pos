@@ -1,5 +1,14 @@
 # Registro de cambios
 
+## 2026-10-27 — conversación del curso de administración (v53)
+- Preparaciones: al editar el costo, el campo para agregar insumo ya tiene el mismo buscador por letras que las recetas (lista de insumos y preparaciones).
+- Nueva preparación «※ Ensalada base» (rinde 20 porciones: zanahoria 1 kg, pepino 0.6, jícama 0.6, jitomate 0.6, aguacate 0.4, naranja 0.7 kg; pesos estimados).
+- Guarniciones como preparaciones editables: «※ Arroz (guarnición)» 67 g de arroz, «※ Papas (guarnición)» 150 g, «※ Plátano (guarnición)» 80 g.
+- Pescaditos: las opciones Con arroz / Con ensalada / Con papas / Con todo / combinaciones / Con plátano descuentan su guarnición (`GUARM`, `guar`).
+- Mojarra, camarones, filete y pollo y res incluyen arroz y ensalada base salvo «Sin arroz» / «Sin ensalada»; «Con papas» y «Con plátano» agregan la suya.
+- Las recetas muestran una nota 🍽 con las guarniciones y botones para ir a cada preparación.
+- Si se quita un ingrediente automático (caldo, capsu, guarnición, tortilla) de una receta, se respeta y ya no vuelve a agregarse.
+
 ## 2026-10-27 — conversación del curso de administración (v52)
 - Nueva preparación con costo «※ Salsa capsu» (rinde 14 L): ½ bote de capsu, 1 L de Mirinda, piloncillo (~300 g) y canela (~30 g), según el procedimiento guardado.
 - Los cócteles agregan solos la salsa capsu si su receta no la trae: chico 0.10 L, grande 0.20 L, bola 0.35 L (camarón, campechano, ceviche, jaiba, pulpo); vuelve a la vida 0.10/0.20 L (`CAPSU0`). Con la opción «Sin capsu» no se descuenta.
