@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-27 — Base paella y arroz en el pulpo (conversación del curso)
+- Nueva preparación **※ Base paella** (olla de 4.5 kg, receta del archivo de costos: aceite, cabeza de lomo, tocineta, muslo de pollo, salchicha, jaiba, arroz precocido, almejas, morrón y 5 tiras de pescado).
+- Paella Chica lleva 0.45 kg de base y Paella Grande 0.65 kg (renglón «Arroz preparado» del archivo). Se quitaron arroz y almeja sueltos de la receta porque ya vienen dentro de la base; pacotilla chica 0.02 kg.
+- La orden de Pulpo lleva guarnición de arroz automáticamente (se quita con «Sin arroz»). Mapas `PAELLA0` y `ARROZ0`.
+
 ## 2026-10-27 — conversación del curso de administración (v53)
 - Preparaciones: al editar el costo, el campo para agregar insumo ya tiene el mismo buscador por letras que las recetas (lista de insumos y preparaciones).
 - Nueva preparación «※ Ensalada base» (rinde 20 porciones: zanahoria 1 kg, pepino 0.6, jícama 0.6, jitomate 0.6, aguacate 0.4, naranja 0.7 kg; pesos estimados).
