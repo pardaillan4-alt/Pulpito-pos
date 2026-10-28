@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-10-28 — Arroz por tanda, sazonador combinado y agua bendita con costo (conversación del curso)
+- **※ Arroz cocido**: tanda de 2 kg de arroz crudo (aceite, ajo, cebolla, sal, Knorr Suiza, agua bendita); rinde ~5.5 kg cocido. La guarnición de arroz ahora es 180 g de arroz cocido (≈ los mismos 65 g crudos de antes).
+- **※ Sazonador combinado** (1 lt Maggi + 1 lt salsa inglesa + 1 lt agua, rinde 3 lt) y **※ Agua bendita** (3 kg ajo, laurel, canela, clavo, pimienta, 6 lt agua; rinde ~8.5 lt).
+- Raspa y ceviche usan estas preparaciones en lugar de los nombres sueltos «Combinado»/«Agua bendita».
+- `prepRes`: el parecido por las primeras 5 letras ya no puede caer en una preparación (evita que «Salsa inglesa» se ligue a la salsa capsu).
+
 ## 2026-10-28 — Ceviche preparado con tilapia (conversación del curso)
 - Nueva preparación **※ Ceviche preparado** según la receta de la casa (5 filetes de tilapia, cuaresmeño, cebolla morada, pepino, morrones, vinagre, combinado y agua bendita a flanera = 150 ml, sal, orégano, jugo de 20 limones, 10 aceitunas); rinde ~1.4 kg (estimado, editable).
 - El ceviche ya no se descuenta como raspa: cóctel de ceviche, tostada de ceviche y campechano con ceviche usan el ceviche preparado (`SWAPP`, `SUBM`).
