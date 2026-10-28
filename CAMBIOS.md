@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-28 — Salsas y demás preparaciones con costo; platillos con arroz cocido (conversación del curso)
+- Nuevas preparaciones con costo por tanda (cantidades estimadas a partir de los ingredientes del procedimiento, editables): pico de gallo, harina preparada (solo 10 kg de harina, no 20), ajo dorado, salsas diabla, Veracruz, mango, tamarindo, vino tinto, espinaca, BBQ, guajillo y casera, tinta de pulpo, huevo para empanizado y pozole.
+- Platillo Arroz usa arroz cocido (solo 385 g, con plátano y a la tumbada 180 g, con mariscos/camarón/pulpo/almeja 280 g). Pollo y res toma la guarnición de arroz (se quita con «Sin arroz»).
+- `prepRes`: un ingrediente ya no se puede ligar por parecido a una preparación (evitaba que «Capsu» o «Vino tinto» se ligaran a su propia salsa), y el parecido por 5 letras exige que el insumo empiece igual (evita «Harina de trigo» → «Tortillas de harina»).
+
 ## 2026-10-28 — Arroz por tanda, sazonador combinado y agua bendita con costo (conversación del curso)
 - **※ Arroz cocido**: tanda de 2 kg de arroz crudo (aceite, ajo, cebolla, sal, Knorr Suiza, agua bendita); rinde ~5.5 kg cocido. La guarnición de arroz ahora es 180 g de arroz cocido (≈ los mismos 65 g crudos de antes).
 - **※ Sazonador combinado** (1 lt Maggi + 1 lt salsa inglesa + 1 lt agua, rinde 3 lt) y **※ Agua bendita** (3 kg ajo, laurel, canela, clavo, pimienta, 6 lt agua; rinde ~8.5 lt).
