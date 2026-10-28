@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-28 — Ceviche preparado con tilapia (conversación del curso)
+- Nueva preparación **※ Ceviche preparado** según la receta de la casa (5 filetes de tilapia, cuaresmeño, cebolla morada, pepino, morrones, vinagre, combinado y agua bendita a flanera = 150 ml, sal, orégano, jugo de 20 limones, 10 aceitunas); rinde ~1.4 kg (estimado, editable).
+- El ceviche ya no se descuenta como raspa: cóctel de ceviche, tostada de ceviche y campechano con ceviche usan el ceviche preparado (`SWAPP`, `SUBM`).
+- Combinado y agua bendita se agregan también a la raspa; como son preparaciones de la casa, solo se ligan a un insumo con el nombre exacto (`PREXACT`) para no confundirse con otros (p. ej. «Aguacate»).
+
 ## 2026-10-28 — Marlin preparado y raspa de pescado con costo (conversación del curso)
 - Nuevas preparaciones con costo: **※ Marlin preparado** (tanda de 750 g de marlin, rinde ~1.3 kg) y **※ Raspa de pescado** (tanda de 2 kg de raspa, rinde ~2.1 kg), con cantidades estimadas a partir del procedimiento.
 - Las recetas que usaban «Marlin» crudo (quesadillas, tostada) ahora usan el marlin preparado; las quesadillas de pescado usan la raspa preparada (`SWAPP`). El cóctel de ceviche sigue con raspa cruda.
