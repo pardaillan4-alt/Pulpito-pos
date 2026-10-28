@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v63)
+- Las compras nuevas guardan quién las registró (campo `por`) y la pestaña Compras muestra el nombre.
+
 ## 2026-10-28 — conversación del desarrollo de la app (v62)
 - Costo de insumos: ahora es el promedio ponderado de las últimas 5 compras (campo `h` en el insumo, función `cuProm`), no solo el de la última compra. La importación del Excel usa el mismo cálculo (`invAlta`).
 - Al borrar una compra (pestaña Compras o control de compras en Reportes) el costo se recalcula con las compras que quedan (`recosto`); si no quedan, vuelve al costo base.
