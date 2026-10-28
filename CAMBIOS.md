@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v66)
+- Empanizado con papas: se limita a Filete y Camarones «a secas» (variante sin nombre); Filete Veracruz/Hawaiano/Relleno/Papillón y Camarones Brochetas/Combinado/Hawaiana/Reyna ya no incluyen papas ni muestran la versión empanizada.
+
 ## 2026-10-28 — conversación del desarrollo de la app (v65)
 - Recetas y costos: en Camarones y Filete cada tarjeta muestra también «Versión empanizado(s)» con su costo y margen incluyendo las papas a la francesa.
 
