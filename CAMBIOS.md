@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-27 — conversación del curso de administración (v52)
+- Nueva preparación con costo «※ Salsa capsu» (rinde 14 L): ½ bote de capsu, 1 L de Mirinda, piloncillo (~300 g) y canela (~30 g), según el procedimiento guardado.
+- Los cócteles agregan solos la salsa capsu si su receta no la trae: chico 0.10 L, grande 0.20 L, bola 0.35 L (camarón, campechano, ceviche, jaiba, pulpo); vuelve a la vida 0.10/0.20 L (`CAPSU0`). Con la opción «Sin capsu» no se descuenta.
+- Las preparaciones encuentran el insumo aunque el nombre del inventario sea distinto (p. ej. «Canelon de kilo» para canela).
+
 ## 2026-10-27 — conversación del curso de administración (v51)
 - Recetas y costos: los ingredientes que son preparación (Caldo base, Sazón) muestran el botón «Ver preparación», que lleva a su ficha en Preparaciones.
 - El buscador de recetas también encuentra las preparaciones con costo (por nombre o por ingrediente, p. ej. «jitomate»).

@@ -14,4 +14,4 @@ Este POS lo modifican **dos conversaciones de Claude** distintas (la del desarro
 - Importar compras: pregunta cómo se pagó (caja / aparte / ya registrado en caja).
 - Ingeniería de menú (`ingMenu`, `cLin`) y control de compras capturadas (`ctlC`).
 - Cortesías y consumo interno (`CTS`, campo `cort` en las líneas, sección `cortR` del reporte).
-- Preparaciones con costo y caldo base automático en caldos (`PREP0`, `PREPC`, `prepCU`, `expP`, `CALDO0`, `prepBox`).
+- Preparaciones con costo y caldo base automático en caldos (`PREP0`, `PREPC`, `prepCU`, `expP`, `CALDO0`, `CAPSU0`, `prepBox`).
