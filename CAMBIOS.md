@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-27 — Arreglo: los cambios a las preparaciones no se guardaban (conversación del curso)
+- La nube (Firestore) no acepta listas dentro de listas, y las preparaciones se mandaban así; el error se tragaba en silencio y los cambios vivían solo en la memoria del celular hasta recargar o actualizar.
+- Ahora se guardan como `{i,q}` (`prepOut`) y se leen de vuelta con `prepIn` (acepta también el formato viejo). Si la nube rechaza el guardado, la app muestra un aviso.
+
 ## 2026-10-27 — Base paella y arroz en el pulpo (conversación del curso)
 - Nueva preparación **※ Base paella** (olla de 4.5 kg, receta del archivo de costos: aceite, cabeza de lomo, tocineta, muslo de pollo, salchicha, jaiba, arroz precocido, almejas, morrón y 5 tiras de pescado).
 - Paella Chica lleva 0.45 kg de base y Paella Grande 0.65 kg (renglón «Arroz preparado» del archivo). Se quitaron arroz y almeja sueltos de la receta porque ya vienen dentro de la base; pacotilla chica 0.02 kg.
