@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v64)
+- Camarones y Filete: la opción «Empanizado(s)» incluye automáticamente la guarnición ※ Papas (porción de papas a la francesa) en la receta y en el descuento de inventario (`EMPAP` en `guar`). Nueva opción «Sin papas» para quitarla; «Con papas» no duplica la porción.
+
 ## 2026-10-28 — conversación del desarrollo de la app (v63)
 - Las compras nuevas guardan quién las registró (campo `por`) y la pestaña Compras muestra el nombre.
 
