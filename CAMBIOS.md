@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v62)
+- Costo de insumos: ahora es el promedio ponderado de las últimas 5 compras (campo `h` en el insumo, función `cuProm`), no solo el de la última compra. La importación del Excel usa el mismo cálculo (`invAlta`).
+- Al borrar una compra (pestaña Compras o control de compras en Reportes) el costo se recalcula con las compras que quedan (`recosto`); si no quedan, vuelve al costo base.
+
 ## 2026-10-28 — conversación del desarrollo de la app (v61)
 - Compra manual en Inventario: ahora pregunta cómo se pagó (de la caja / aparte / ya registrada) y genera sola el gasto «Pago de compra» (mismo tratamiento que importar compras, así no se cuenta doble en el estado de resultados ni en el control de compras).
 - Gasto en caja: campo opcional «¿Es compra de inventario?» (insumo + cantidad) que además suma a las existencias y registra la compra; ese gasto se guarda como «Pago de compra».
