@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-28 — Salsas por estilo, editables (conversación del curso)
+- Nueva tarjeta **🌶️ Salsas por estilo** al inicio de Recetas y costos → Preparaciones: si la variante o una opción del platillo contiene la palabra, se descuenta la porción de la preparación. Se guarda en la nube (`config/salsas`) y se puede editar (palabra, preparación, cantidad, agregar/quitar).
+- Valores iniciales: Diabla → salsa diabla 100 ml; Mojo → ajo dorado 30 g; Veracruz → salsa Veracruz 100 g; En su tinta → tinta de pulpo 100 ml; BBQ → salsa BBQ 100 ml; Enchilado/a → salsa guajillo 100 ml; Ranchero → salsa casera 100 g (`SALSA0`, `SALSAS`, `salsaR`).
+
 ## 2026-10-28 — Salsas y demás preparaciones con costo; platillos con arroz cocido (conversación del curso)
 - Nuevas preparaciones con costo por tanda (cantidades estimadas a partir de los ingredientes del procedimiento, editables): pico de gallo, harina preparada (solo 10 kg de harina, no 20), ajo dorado, salsas diabla, Veracruz, mango, tamarindo, vino tinto, espinaca, BBQ, guajillo y casera, tinta de pulpo, huevo para empanizado y pozole.
 - Platillo Arroz usa arroz cocido (solo 385 g, con plátano y a la tumbada 180 g, con mariscos/camarón/pulpo/almeja 280 g). Pollo y res toma la guarnición de arroz (se quita con «Sin arroz»).
