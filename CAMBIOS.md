@@ -3,7 +3,7 @@
 ## 2026-10-28 — Marlin preparado y raspa de pescado con costo (conversación del curso)
 - Nuevas preparaciones con costo: **※ Marlin preparado** (tanda de 750 g de marlin, rinde ~1.3 kg) y **※ Raspa de pescado** (tanda de 2 kg de raspa, rinde ~2.1 kg), con cantidades estimadas a partir del procedimiento.
 - Las recetas que usaban «Marlin» crudo (quesadillas, tostada) ahora usan el marlin preparado; las quesadillas de pescado usan la raspa preparada (`SWAPP`). El cóctel de ceviche sigue con raspa cruda.
-- Tostada de marlin: 80 g de marlin preparado (antes no descontaba nada).
+- Tostada de marlin: sus 80 g ahora se descuentan como marlin preparado.
 
 ## 2026-10-27 — Arreglo: los cambios a las preparaciones no se guardaban (conversación del curso)
 - La nube (Firestore) no acepta listas dentro de listas, y las preparaciones se mandaban así; el error se tragaba en silencio y los cambios vivían solo en la memoria del celular hasta recargar o actualizar.
