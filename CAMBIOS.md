@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v71)
+- Recetas y costos, agregar ingrediente: la lista de sugerencias vuelve a incluir las preparaciones/salsas base (※) y el buscador `insFind` las encuentra sin escribir el símbolo ※ (p. ej. «salsa vera» → ※ Salsa Veracruz).
+
 ## 2026-10-28 — conversación del desarrollo de la app (v70)
 - Salsas por estilo (`salsaR`): no se agrega la salsa automática si la receta ya trae un ingrediente con el mismo nombre que la preparación (con o sin ※), para no contarla dos veces.
 
