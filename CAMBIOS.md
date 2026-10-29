@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-10-29 (v77) — Aguas frescas ligadas a las tandas
+Desde: conversación de desarrollo de la app.
+- Agua fresca del menú: al elegir sabor (Jamaica, Horchata, Piña, Tamarindo) descuenta y costea la **tanda** correspondiente: Vaso 0.4 lt, Jarra 1 lt, Jarra 2 lt. Botella de agua no usa tanda.
+- Sustituye al "Jarabe de sabor" genérico cuando hay sabor elegido (no se cuenta doble). Si no hay sabor, queda como antes.
+- Constantes `AGUAT` / `AGUAT_L` en `recDe`.
+
 ## 2026-10-29 (v76) — Tandas de aguas frescas (4 litros)
 Desde: conversación de desarrollo de la app.
 - Nuevas preparaciones con costo: **※ Tanda agua de jamaica**, **de horchata**, **de piña** y **de tamarindo**; cada una rinde 4 litros (cantidades estimadas, ajustables).
