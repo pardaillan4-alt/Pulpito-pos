@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-29 (v75) — Porción de camarones y Porción de ostión
+Desde: conversación de desarrollo de la app.
+- Renombrada **※ Porción camarones** → **※ Porción de camarones** (se migra solo en los dispositivos).
+- Nueva **※ Porción de ostión** (0.1 kg estimado), ligada a la opción Ostiones de la Cerveza.
+
 ## 2026-10-29 (v74) — Preparaciones: Michelada, Porción camarones, Porción de clamato
 Desde: conversación de desarrollo de la app.
 - Nuevas preparaciones con costo: **※ Michelada**, **※ Porción camarones** y **※ Porción de clamato** (cantidades estimadas, ajustables en Recetas y costos).
