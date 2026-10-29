@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v69)
+- Preparaciones nuevas con costo: ※ Salsa enamorado y ※ Salsa en su tinta (esta envuelve a ※ Tinta de pulpo). Estilos «Enamorado» y «En su tinta» ligados en `SALSA0`; `migSalsas` actualiza «En su tinta» de ※ Tinta de pulpo a ※ Salsa en su tinta.
+
 ## 2026-10-28 — conversación del desarrollo de la app (v68)
 - Preparaciones nuevas con costo: ※ Salsa crema chipotle, ※ Salsa cucaracha, ※ Porción coco y ※ Porción ranchero (las dos últimas son porciones, no salsas). Ligadas por estilo en `SALSA0` («Crema chipotle», «Cucaracha», «Coco», «Ranchero»); «Ranchero» pasa de ※ Salsa casera a ※ Porción ranchero (`migSalsas`).
 
