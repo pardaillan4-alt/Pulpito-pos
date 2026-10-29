@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-29 (v76) — Tandas de aguas frescas (4 litros)
+Desde: conversación de desarrollo de la app.
+- Nuevas preparaciones con costo: **※ Tanda agua de jamaica**, **de horchata**, **de piña** y **de tamarindo**; cada una rinde 4 litros (cantidades estimadas, ajustables).
+- No se ligaron automáticamente a las aguas frescas del menú; solo son preparaciones con costo por litro.
+
 ## 2026-10-29 (v75) — Porción de camarones y Porción de ostión
 Desde: conversación de desarrollo de la app.
 - Renombrada **※ Porción camarones** → **※ Porción de camarones** (se migra solo en los dispositivos).
