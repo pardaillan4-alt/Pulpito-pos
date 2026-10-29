@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-29 — conversación del desarrollo de la app (v73)
+- Preparación nueva con costo: ※ Tanda de flan (rinde 6 pz de flan de postre), ligada a Postres → Flan napolitano (1 pz por venta). El huevo (0.04) que estaba directo en esa receta pasó a la tanda.
+
 ## 2026-10-29 — conversación del desarrollo de la app (v72)
 - Preparaciones nuevas con costo: ※ Porción carne chile en nogada y ※ Salsa nogada, ligadas al estilo «En nogada» de Chiles (`SALSA0`). La carne molida (0.084) que estaba directo en la receta de Chiles pasó a la porción para no contarla doble.
 
