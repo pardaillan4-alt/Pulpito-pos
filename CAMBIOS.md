@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-29 — conversación del desarrollo de la app (v72)
+- Preparaciones nuevas con costo: ※ Porción carne chile en nogada y ※ Salsa nogada, ligadas al estilo «En nogada» de Chiles (`SALSA0`). La carne molida (0.084) que estaba directo en la receta de Chiles pasó a la porción para no contarla doble.
+
 ## 2026-10-28 — conversación del desarrollo de la app (v71)
 - Recetas y costos, agregar ingrediente: la lista de sugerencias vuelve a incluir las preparaciones/salsas base (※) y el buscador `insFind` las encuentra sin escribir el símbolo ※ (p. ej. «salsa vera» → ※ Salsa Veracruz).
 
