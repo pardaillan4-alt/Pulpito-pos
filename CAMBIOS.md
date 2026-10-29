@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-29 (v78) — Olla para café de olla (4 tazas)
+Desde: conversación de desarrollo de la app.
+- Nueva preparación **※ Olla café de olla** (rinde 4 tazas: café, piloncillo, canela; cantidades estimadas).
+- Café > Café de olla ahora descuenta 1 taza de la olla en lugar del café suelto. "Agua para té" no cambia.
+
 ## 2026-10-29 (v77) — Aguas frescas ligadas a las tandas
 Desde: conversación de desarrollo de la app.
 - Agua fresca del menú: al elegir sabor (Jamaica, Horchata, Piña, Tamarindo) descuenta y costea la **tanda** correspondiente: Vaso 0.4 lt, Jarra 1 lt, Jarra 2 lt. Botella de agua no usa tanda.
