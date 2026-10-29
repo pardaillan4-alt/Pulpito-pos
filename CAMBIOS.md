@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-10-29 (v74) — Preparaciones: Michelada, Porción camarones, Porción de clamato
+Desde: conversación de desarrollo de la app.
+- Nuevas preparaciones con costo: **※ Michelada**, **※ Porción camarones** y **※ Porción de clamato** (cantidades estimadas, ajustables en Recetas y costos).
+- Ligadas solo al producto **Cerveza**: al elegir la opción Michelada, Camarón o Clamato se descuentan y se suman al costo. No afectan a otros productos con "Clamato" o "Camarón" (jugos, caldos, cócteles).
+- `SALSA0` admite campo `n` (producto) y `salsaR` lo respeta; `migSalsas` agrega las nuevas reglas sin tocar las existentes.
+
 ## 2026-10-29 — conversación del desarrollo de la app (v73)
 - Preparación nueva con costo: ※ Tanda de flan (rinde 6 pz de flan de postre), ligada a Postres → Flan napolitano (1 pz por venta). El huevo (0.04) que estaba directo en esa receta pasó a la tanda.
 
