@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v68)
+- Preparaciones nuevas con costo: ※ Salsa crema chipotle, ※ Salsa cucaracha, ※ Porción coco y ※ Porción ranchero (las dos últimas son porciones, no salsas). Ligadas por estilo en `SALSA0` («Crema chipotle», «Cucaracha», «Coco», «Ranchero»); «Ranchero» pasa de ※ Salsa casera a ※ Porción ranchero (`migSalsas`).
+
 ## 2026-10-28 — conversación del desarrollo de la app (v67)
 - Preparaciones nuevas con costo: ※ Salsa mantequilla, ※ Salsa ajillo y ※ Salsa enchilada (receta base editable). Se ligan por estilo en `SALSA0`: «Mantequilla», «Ajillo» y «Enchilad» (antes enchilada usaba la salsa guajillo; `migSalsas` lo actualiza sin tocar otros estilos).
 
