@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-10-28 — conversación del desarrollo de la app (v70)
+- Salsas por estilo (`salsaR`): no se agrega la salsa automática si la receta ya trae un ingrediente con el mismo nombre que la preparación (con o sin ※), para no contarla dos veces.
+
 ## 2026-10-28 — conversación del desarrollo de la app (v69)
 - Preparaciones nuevas con costo: ※ Salsa enamorado y ※ Salsa en su tinta (esta envuelve a ※ Tinta de pulpo). Estilos «Enamorado» y «En su tinta» ligados en `SALSA0`; `migSalsas` actualiza «En su tinta» de ※ Tinta de pulpo a ※ Salsa en su tinta.
 
