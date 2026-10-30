@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-29 (v79) — Confirmar al quitar un gasto en el corte de caja
+Desde: conversación de desarrollo de la app.
+- Al quitar un gasto/ingreso del corte de caja (`delMov`) ahora se pregunta "¿Seguro que quieres quitar…?" mostrando concepto e importe; si se cancela no se borra nada. Después sigue la autorización normal.
+
 ## 2026-10-29 (v78) — Olla para café de olla (4 tazas)
 Desde: conversación de desarrollo de la app.
 - Nueva preparación **※ Olla café de olla** (rinde 4 tazas: café, piloncillo, canela; cantidades estimadas).
