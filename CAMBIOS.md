@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-10-30 (v82) — Camarones: hawaiana/aguachile, salsas nuevas y ventas sin propina
+Desde: conversación de desarrollo de la app.
+- Camarones **Hawaiana** + «Camarón pelado»: ya no suma/descuenta Pacotilla extra (la receta ya la incluye). Las demás variantes siguen igual.
+- Camarones con **Aguachile**: ya no descuenta ※ Arroz (guarnición) ni ※ Ensalada base.
+- Preparaciones nuevas: **※ Salsa aguachile**, **※ Salsa tequila** (ligadas a Camarones con las opciones Aguachile y Tequila) y **※ Porción plancha** (opción Plancha en Camarones y Filete). Cantidades estimadas.
+- Mesas: «Ventas del día» ahora muestra el monto sin propinas.
+
 ## 2026-10-30 (v81) — ARREGLO: registrar compras no hacía nada (Firestore)
 Desde: conversación de desarrollo de la app.
 - Causa: el historial de costos `h` (para el costo promedio, v~70) se guardaba como arreglo de arreglos `[[cant,costo],…]`, y Firestore no admite arreglos anidados; al guardar la compra con la nube conectada se lanzaba un error y el botón «Registrar compras» no hacía nada. Ahora `h` se guarda como `[{q,c}]` (`cuProm` sigue leyendo el formato viejo).
