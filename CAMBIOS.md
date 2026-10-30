@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-30 (v80) — Compra de cerveza/refrescos por caja: errores visibles y bebidas nuevas
+Desde: conversación de desarrollo de la app.
+- Los avisos al registrar la compra (falta indicar cómo se pagó, falta cantidad o costo) ahora salen en rojo junto al botón «Registrar compras» y la pantalla baja hasta ellos; antes salían arriba y parecía que "no dejaba".
+- Nuevo recuadro **➕ Agregar otra bebida / refresco** (nombre + piezas por caja): crea el concepto en Inventario (categoría Bebidas), y queda guardado en la lista (`BEBX`, Firestore `config/bebx`) para las siguientes compras.
+
 ## 2026-10-29 (v79) — Confirmar al quitar un gasto en el corte de caja
 Desde: conversación de desarrollo de la app.
 - Al quitar un gasto/ingreso del corte de caja (`delMov`) ahora se pregunta "¿Seguro que quieres quitar…?" mostrando concepto e importe; si se cancela no se borra nada. Después sigue la autorización normal.
