@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-30 (v81) — ARREGLO: registrar compras no hacía nada (Firestore)
+Desde: conversación de desarrollo de la app.
+- Causa: el historial de costos `h` (para el costo promedio, v~70) se guardaba como arreglo de arreglos `[[cant,costo],…]`, y Firestore no admite arreglos anidados; al guardar la compra con la nube conectada se lanzaba un error y el botón «Registrar compras» no hacía nada. Ahora `h` se guarda como `[{q,c}]` (`cuProm` sigue leyendo el formato viejo).
+- `impReg` ahora atrapa cualquier error y lo muestra en rojo junto al botón; al terminar bien sube al inicio para ver el mensaje de éxito.
+
 ## 2026-10-30 (v80) — Compra de cerveza/refrescos por caja: errores visibles y bebidas nuevas
 Desde: conversación de desarrollo de la app.
 - Los avisos al registrar la compra (falta indicar cómo se pagó, falta cantidad o costo) ahora salen en rojo junto al botón «Registrar compras» y la pantalla baja hasta ellos; antes salían arriba y parecía que "no dejaba".
