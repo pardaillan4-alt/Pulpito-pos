@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-30 (v83) — Porción plancha solo en Camarones
+Desde: conversación de desarrollo de la app.
+- ※ Porción plancha ahora se descuenta solo en Camarones con la opción Plancha (ya no en Filete). La regla guardada en los dispositivos se migra sola.
+- Camarones con Plancha tampoco descuenta ※ Arroz (guarnición) ni ※ Ensalada base (igual que Aguachile).
+
 ## 2026-10-30 (v82) — Camarones: hawaiana/aguachile, salsas nuevas y ventas sin propina
 Desde: conversación de desarrollo de la app.
 - Camarones **Hawaiana** + «Camarón pelado»: ya no suma/descuenta Pacotilla extra (la receta ya la incluye). Las demás variantes siguen igual.
