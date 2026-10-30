@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-30 (v84) — Tanda para carne de chile en nogada
+Desde: conversación de desarrollo de la app (receta de la libreta de la dueña).
+- Nueva preparación **※ Tanda para carne de chile en nogada**: 500 g carne molida (res+puerco), 200 g fruta, 3 soperas agua bendita y combinado, 70 g cebolla, 4 dientes de ajo, aceite; rinde ~8 bolsas de 80 g (estimado). Con ingredientes y procedimiento de la receta.
+- No se modificó la «Porción carne chile en nogada» existente.
+
 ## 2026-10-30 (v83) — Porción plancha solo en Camarones
 Desde: conversación de desarrollo de la app.
 - ※ Porción plancha ahora se descuenta solo en Camarones con la opción Plancha (ya no en Filete). La regla guardada en los dispositivos se migra sola.
