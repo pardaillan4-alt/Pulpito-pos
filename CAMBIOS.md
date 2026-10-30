@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-10-30 (v86) — Editar el pedido antes de enviarlo a cocina
+Desde: conversación de desarrollo de la app.
+- En Pedido > «Por enviar», al tocar un renglón se abre la misma hoja del platillo con lo elegido (variante, extras, para llevar, comentario, cantidad, cortesía) y el botón «Guardar cambios»; reemplaza ese renglón en lugar de agregar otro. Cortesía nueva sigue pidiendo NIP de administrador.
+- Las líneas del pedido guardan ahora `ll` (para llevar) y `cm` (comentario) para poder reabrirlas.
+
 ## 2026-10-30 (v85) — Porción carne chile en nogada ligada a la tanda
 Desde: conversación de desarrollo de la app.
 - ※ Porción carne chile en nogada ahora = 1 bolsa (1/8 de la ※ Tanda para carne de chile en nogada) + nuez; el costo sale de la tanda. Los productos que ya usan la porción no cambian.
