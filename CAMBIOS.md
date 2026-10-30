@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-30 (v85) — Porción carne chile en nogada ligada a la tanda
+Desde: conversación de desarrollo de la app.
+- ※ Porción carne chile en nogada ahora = 1 bolsa (1/8 de la ※ Tanda para carne de chile en nogada) + nuez; el costo sale de la tanda. Los productos que ya usan la porción no cambian.
+
 ## 2026-10-30 (v84) — Tanda para carne de chile en nogada
 Desde: conversación de desarrollo de la app (receta de la libreta de la dueña).
 - Nueva preparación **※ Tanda para carne de chile en nogada**: 500 g carne molida (res+puerco), 200 g fruta, 3 soperas agua bendita y combinado, 70 g cebolla, 4 dientes de ajo, aceite; rinde ~8 bolsas de 80 g (estimado). Con ingredientes y procedimiento de la receta.
