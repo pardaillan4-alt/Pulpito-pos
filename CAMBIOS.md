@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-10-31 (v88) — Concentrado de jamaica
+Desde: conversación de desarrollo de la app.
+- Nueva preparación **※ Concentrado de jamaica** (rinde ~2 lt; insumo: la jamaica del inventario, 0.25 kg estimado).
+
 ## 2026-10-30 (v87) — Historial de ventas en gráfica de barras (sin propinas)
 Desde: conversación de desarrollo de la app.
 - Reportes: nueva tarjeta «Resumen de ventas» con Recibos, Ventas netas y Venta promedio (con % contra el periodo anterior de igual duración) y gráfica de barras tocable (hoy por hora; semana/mes/personalizado por día; año por mes). Todo **sin propinas** (cobrado − propina).
