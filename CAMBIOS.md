@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-10-30 (v87) — Historial de ventas en gráfica de barras (sin propinas)
+Desde: conversación de desarrollo de la app.
+- Reportes: nueva tarjeta «Resumen de ventas» con Recibos, Ventas netas y Venta promedio (con % contra el periodo anterior de igual duración) y gráfica de barras tocable (hoy por hora; semana/mes/personalizado por día; año por mes). Todo **sin propinas** (cobrado − propina).
+- Botones ‹ Anterior / Siguiente › para recorrer días, semanas, meses o años (`S.rg.o`; `rango()` lo respeta). Personalizado sigue con sus fechas.
+- Se reemplazó la lista de texto «Ventas por día». El resto del reporte (estado de resultados, etc.) no cambia.
+
 ## 2026-10-30 (v86) — Editar el pedido antes de enviarlo a cocina
 Desde: conversación de desarrollo de la app.
 - En Pedido > «Por enviar», al tocar un renglón se abre la misma hoja del platillo con lo elegido (variante, extras, para llevar, comentario, cantidad, cortesía) y el botón «Guardar cambios»; reemplaza ese renglón en lugar de agregar otro. Cortesía nueva sigue pidiendo NIP de administrador.
