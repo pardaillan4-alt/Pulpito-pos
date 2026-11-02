@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-11-02 (v91) — Pago mixto (tarjeta + efectivo)
+Desde: conversación de desarrollo de la app.
+- Cobro: nueva opción **Mixto**. Se escribe el monto en tarjeta; el resto es efectivo (con «Recibe…» y cambio solo sobre la parte en efectivo). El pago se guarda como un solo cobro con `met:"Mixto"`, `tj` (tarjeta) y `ef` (efectivo).
+- El cobro con tarjeta (copiar monto / abrir Inbursa) usa solo el monto en tarjeta (`cardAmt`).
+- Corte de caja y Reportes: efectivo = parte `ef` (helpers `efP/tjP/tpP`); la propina de la parte en tarjeta se reparte proporcional para el descuento de propinas pagadas de caja.
+- Ticket impreso e historial de tickets muestran Efectivo / Tarjeta del cobro mixto.
+
 ## 2026-11-02 — v93: empanada de camarón con 35 g de pacotilla (conversación del curso)
 - Receta de Empanada Camarón: 35 g de pacotilla (antes 24 g), según lo que se pesa en barra. La empanada se compra a $13 ya hecha y solo se rellena.
 
