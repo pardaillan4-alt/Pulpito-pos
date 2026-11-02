@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-02 — v93: empanada de camarón con 35 g de pacotilla (conversación del curso)
+- Receta de Empanada Camarón: 35 g de pacotilla (antes 24 g), según lo que se pesa en barra. La empanada se compra a $13 ya hecha y solo se rellena.
+
 ## 2026-11-02 — v92: campechano con pulpo al precio del cóctel de pulpo (conversación del curso)
 - La opción «Cam/pul» del Cóctel campechano ahora suma según el tamaño: chico +$25, grande +$50, bola +$43 (queda en $100 / $165 / $225, igual que el cóctel de pulpo). El botón muestra el cargo del tamaño elegido. Mapa `MODP` y función `mpx` (cargo de opción por tamaño).
 - La mezcla con jaiba se queda al precio normal (decisión del dueño: casi no se pide).
