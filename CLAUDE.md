@@ -13,5 +13,6 @@ Este POS lo modifican **dos conversaciones de Claude** distintas (la del desarro
 - Categorías obligatorias de gasto en caja (`GCI`, `GCO`, `GPC`) y clasificación automática de gastos viejos (`gcat0`).
 - Importar compras: pregunta cómo se pagó (caja / aparte / ya registrado en caja).
 - Ingeniería de menú (`ingMenu`, `cLin`) y control de compras capturadas (`ctlC`).
+- Cargo de opción por tamaño (`MODP`, `mpx`): campechano con pulpo al precio del cóctel de pulpo.
 - Cortesías y consumo interno (`CTS`, campo `cort` en las líneas, sección `cortR` del reporte).
 - Preparaciones con costo y caldo base automático en caldos (`PREP0`, `PREPC`, `prepCU`, `expP`, `CALDO0`, `CAPSU0`, `PAELLA0`, `SWAPP`, `SALSAS`/`salsaR`, `prepBox`), guarniciones por opción (`GUARM`, `guar`, `guarNota`, `ARROZ0`).

@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-02 — v92: campechano con pulpo al precio del cóctel de pulpo (conversación del curso)
+- La opción «Cam/pul» del Cóctel campechano ahora suma según el tamaño: chico +$25, grande +$50, bola +$43 (queda en $100 / $165 / $225, igual que el cóctel de pulpo). El botón muestra el cargo del tamaño elegido. Mapa `MODP` y función `mpx` (cargo de opción por tamaño).
+- La mezcla con jaiba se queda al precio normal (decisión del dueño: casi no se pide).
+
 ## 2026-11-02 — v91: porciones pesadas del cóctel campechano (conversación del curso)
 - Receta de Cóctel campechano con lo que se pesó en barra: chico 40 g camarón + 42 g ostión; grande 100 g + 86 g; bola 160 g + 150 g (antes 52/40, 100/70, 180/140). La salsa capsu no cambia.
 
