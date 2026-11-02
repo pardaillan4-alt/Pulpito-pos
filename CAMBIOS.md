@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-02 — v91: porciones pesadas del cóctel campechano (conversación del curso)
+- Receta de Cóctel campechano con lo que se pesó en barra: chico 40 g camarón + 42 g ostión; grande 100 g + 86 g; bola 160 g + 150 g (antes 52/40, 100/70, 180/140). La salsa capsu no cambia.
+
 ## 2026-11-02 (v90) — Aguas frescas: desglose por sabor en Recetas y costos
 Desde: conversación de desarrollo de la app.
 - Recetas y costos > Agua fresca: en cada presentación (Vaso, Jarra 1 lt, Jarra 2 lt) aparece «Por sabor» con Jamaica, Horchata, Tamarindo y Piña, cada uno con su tanda, litros por presentación (editables con «Editar») y costo. Botella de agua indica que no usa tanda.
