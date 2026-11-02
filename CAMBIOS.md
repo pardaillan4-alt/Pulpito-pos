@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-11-01 (v89) — Modo sin conexión, fase 1
+Desde: conversación de desarrollo de la app.
+- Franja de estado bajo el encabezado (`#offb`): «SIN CONEXIÓN» (rojo, con contador de pendientes), «Sincronizando N registros…» (amarillo) y «Todo sincronizado» (verde, 5 s). Detecta tanto `navigator.onLine` como Firestore sirviendo solo de caché por más de 5 s (WiFi sin internet). El reloj también indica «sin conexión».
+- Pendientes = documentos de lineas/pagos/movs con `hasPendingWrites` (listeners con `includeMetadataChanges`).
+- Aviso rojo si el equipo no quedó ligado a Firebase (lo que capture no se sincronizaría).
+- Usuarios: se guardan también en localStorage al llegar de la nube; sin conexión y sin usuarios guardados ya NO se ofrece «Primer uso / crear administrador», solo pide conectarse una vez. Pantalla «Cargando usuarios…» mientras llegan.
+
 ## 2026-10-31 (v88) — Concentrado de jamaica
 Desde: conversación de desarrollo de la app.
 - Nueva preparación **※ Concentrado de jamaica** (rinde ~2 lt; insumo: la jamaica del inventario, 0.25 kg estimado).
