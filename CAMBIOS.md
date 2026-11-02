@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-11-02 (v90) — Aguas frescas: desglose por sabor en Recetas y costos
+Desde: conversación de desarrollo de la app.
+- Recetas y costos > Agua fresca: en cada presentación (Vaso, Jarra 1 lt, Jarra 2 lt) aparece «Por sabor» con Jamaica, Horchata, Tamarindo y Piña, cada uno con su tanda, litros por presentación (editables con «Editar») y costo. Botella de agua indica que no usa tanda.
+- Los litros se guardan en `AGUAQ` (localStorage y Firestore `config/aguaq`); `recDe` los usa al vender (descuenta la tanda del sabor elegido en lugar del «Jarabe de sabor»).
+
 ## 2026-11-01 (v89) — Modo sin conexión, fase 1
 Desde: conversación de desarrollo de la app.
 - Franja de estado bajo el encabezado (`#offb`): «SIN CONEXIÓN» (rojo, con contador de pendientes), «Sincronizando N registros…» (amarillo) y «Todo sincronizado» (verde, 5 s). Detecta tanto `navigator.onLine` como Firestore sirviendo solo de caché por más de 5 s (WiFi sin internet). El reloj también indica «sin conexión».
