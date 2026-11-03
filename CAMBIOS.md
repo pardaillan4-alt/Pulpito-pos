@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-03 (v97) — Botón «Sin avisos» junto a «Mover mesa» — chat de desarrollo
+- El botón 🔕 Sin avisos / 🔔 Activar avisos se movió del encabezado de la mesa (donde empujaba el botón Cobrar fuera de la pantalla) a la fila de «Mover mesa».
+
 ## 2026-11-03 (v96) — Avisos en todas las mesas; el administrador puede quitarlos por mesa — chat de desarrollo
 - Los avisos de cobro (cuenta impresa, sin cobrar) vuelven a aplicar a TODAS las mesas, incluidos pedidos con nombre.
 - Nuevo botón «🔕 Sin avisos» / «🔔 Activar avisos» dentro de la mesa (solo administrador, pide NIP). La mesa marcada muestra 🔕 en la lista y no genera avisos ni entra al aviso del corte. Se guarda en `config/sinav` (se sincroniza entre celulares).
