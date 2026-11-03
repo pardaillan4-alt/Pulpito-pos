@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-03 (v101) — Cóctel campechano: opciones Ostión, Pulpo/ost y Ceviche/ost — chat de desarrollo
+- Nuevas opciones en «Preparación y extras» del Cóctel campechano: **Ostión** (puro ostión: la pacotilla se cambia por ostión), **Pulpo/ost** (pulpo + ostión; mismo cargo por tamaño que Cam/pul: +25/+50/+43) y **Ceviche/ost** (ceviche preparado + ostión, sin cargo). Descuentan inventario según la receta (se cambia solo la parte de pacotilla).
+- Ostión puro y Ceviche/ost no suman cargo; si se quiere cobrar diferente se edita `MODP`.
+
 ## 2026-11-03 (v100) — Historial de cobros en Reportes y desglose de propina en Tickets — chat de desarrollo
 - Reportes: nueva sección «Historial de cobros» (una línea por cobro: mesa, hora/fecha, método, quién cobró, monto sin propina, con propina y propina) con buscador por mesa y totales; respeta el rango de fechas elegido.
 - Más > Tickets: cada ticket y el total muestran monto sin propina, con propina y propina.
