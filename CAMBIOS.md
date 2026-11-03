@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-02 (v95) — Alertas de mesa: solo mesas preestablecidas (más robusto) — chat de desarrollo
+- Las alertas ("Mesas por revisar", cuenta sin pagar, inactividad) ahora solo aplican a mesas 1-20 y Para llevar L1-L3 (y sus cuentas divididas). Cualquier otro pedido (con nombre, con cualquier formato de id) queda excluido, no solo los que empiezan con "X-".
+- El reloj de la parte superior muestra el número de versión instalada (ej. "· v95") para saber si el celular ya actualizó.
+
 ## 2026-11-02 (v94) — Las alertas de mesa no aplican a pedidos con nombre
 Desde: conversación de desarrollo de la app.
 - Los pedidos personalizados (mesas «X-nombre», p. ej. conocidos que pagan después) ya no generan alertas de cuenta impresa / sin cobrar ni aparecen en el bloque de «cuentas esperando cierre».
