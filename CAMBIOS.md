@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-11-02 (v94) — Las alertas de mesa no aplican a pedidos con nombre
+Desde: conversación de desarrollo de la app.
+- Los pedidos personalizados (mesas «X-nombre», p. ej. conocidos que pagan después) ya no generan alertas de cuenta impresa / sin cobrar ni aparecen en el bloque de «cuentas esperando cierre».
+- Tampoco bloquean el aviso del corte de caja (`openMesas` los omite). Mesas numeradas y Para llevar siguen igual.
+
 ## 2026-11-02 (v93) — Control de mesas: cuenta impresa, cierre rápido y «se fue sin pagar»
 Desde: conversación de desarrollo de la app.
 - Al imprimir la cuenta se guarda un registro (`S.cx[mesa]` = hora, total, propina, descuento; en Firestore dentro del doc `ci`). Se borra al cobrar.
