@@ -1,5 +1,15 @@
 # Registro de cambios
 
+## 2026-11-02 (v93) — Control de mesas: cuenta impresa, cierre rápido y «se fue sin pagar»
+Desde: conversación de desarrollo de la app.
+- Al imprimir la cuenta se guarda un registro (`S.cx[mesa]` = hora, total, propina, descuento; en Firestore dentro del doc `ci`). Se borra al cobrar.
+- Mesas: bloque arriba «🧾 N cuentas esperando cierre · $» con **Efectivo / Tarjeta / Mixto** (cierre rápido: abre el cobro con método, propina y descuento de la cuenta impresa y sin reabrir la app del banco) y **Aún no pagó** (reinicia el reloj).
+- Colores por mesa: cuenta impresa 5 min → amarillo, 12 min → rojo (`CTA_AM`, `CTA_RJ`); mesa con todo entregado y 40 min sin movimiento → rojo «sin cobrar» (`SIN_COBRO`).
+- Mesa recién cobrada: «✅ Cobrada hh:mm · $ · método · quién» durante 15 min en la mesa libre (se puede tomar pedido normal).
+- **Se fue sin pagar** (solo administrador, NIP, con motivo): las líneas quedan `np:true`, no cuentan como venta y aparecen en Reportes («Cuentas que se fueron sin pagar»). Inventario ya descontado se conserva.
+- Cobro con tarjeta/mixto: campo opcional «Referencia / autorización» (`p.ref`), visible en Tickets.
+- Corte de caja: si quedan mesas con consumo sin cobrar avisa y pide cobrar o marcar «se fue sin pagar» (o continuar de todos modos).
+
 ## 2026-11-02 (v92) — Recordatorio de pedido sin enviar
 Desde: conversación de desarrollo de la app.
 - Pedido: barra roja fija arriba «📨 Enviar N pendientes · $total» mientras haya algo por enviar (`#pendbar`).
