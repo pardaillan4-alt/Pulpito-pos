@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-03 (v98) — Botón Cobrar siempre visible y 3 refrescos nuevos — chat de desarrollo
+- Encabezado de la mesa: el nombre se ajusta (con «N en cocina» debajo) y «Cobrar» queda fijo a la derecha; ya no ensancha la pantalla en nombres largos.
+- Refrescos nuevos: Valle guayaba, Fresca y Mundet rojo ($32 c/u, igual que los demás), con su insumo en inventario (pz) y descuento de 1 pieza por venta. Falta capturar su costo/compra en inventario.
+
 ## 2026-11-03 (v97) — Botón «Sin avisos» junto a «Mover mesa» — chat de desarrollo
 - El botón 🔕 Sin avisos / 🔔 Activar avisos se movió del encabezado de la mesa (donde empujaba el botón Cobrar fuera de la pantalla) a la fila de «Mover mesa».
 
