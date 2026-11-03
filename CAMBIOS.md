@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-03 (v99) — Abono de préstamo y color de fondo de mesas con aviso — chat de desarrollo
+- Abono/préstamo al personal: el nombre del empleado ya no distingue mayúsculas/minúsculas al abonar (se liga con el saldo existente); los mensajes de error (ej. «el abono es mayor que lo que debe») ahora se ven junto al botón Agregar, no solo arriba de la página.
+- Mesas con aviso: el fondo de la tarjeta cambia de color (amarillo a los 5 min / rojo a los 12 min de cuenta, rojo en mesa sin cobrar), con colores que se ven bien en tema oscuro y claro (`--avA`, `--avR`).
+
 ## 2026-11-03 (v98) — Botón Cobrar siempre visible y 3 refrescos nuevos — chat de desarrollo
 - Encabezado de la mesa: el nombre se ajusta (con «N en cocina» debajo) y «Cobrar» queda fijo a la derecha; ya no ensancha la pantalla en nombres largos.
 - Refrescos nuevos: Valle guayaba, Fresca y Mundet rojo ($32 c/u, igual que los demás), con su insumo en inventario (pz) y descuento de 1 pieza por venta. Falta capturar su costo/compra en inventario.
