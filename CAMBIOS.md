@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-11-02 (v92) — Recordatorio de pedido sin enviar
+Desde: conversación de desarrollo de la app.
+- Pedido: barra roja fija arriba «📨 Enviar N pendientes · $total» mientras haya algo por enviar (`#pendbar`).
+- Al tocar «← Mesas», cambiar de pestaña o «Cobrar» con algo sin enviar sale un aviso (`pqS`): Enviar ahora / Salir sin enviar / Seguir en la mesa.
+- Lista de mesas: «⚠ N sin enviar» en rojo en la mesa que tenga pendientes.
+- Pendiente de decidir (no hecho): enviar solas las bebidas de barra al salir de la mesa.
+
 ## 2026-11-02 (v91) — Pago mixto (tarjeta + efectivo)
 Desde: conversación de desarrollo de la app.
 - Cobro: nueva opción **Mixto**. Se escribe el monto en tarjeta; el resto es efectivo (con «Recibe…» y cambio solo sobre la parte en efectivo). El pago se guarda como un solo cobro con `met:"Mixto"`, `tj` (tarjeta) y `ef` (efectivo).
