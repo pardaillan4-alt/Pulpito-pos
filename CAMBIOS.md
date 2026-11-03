@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-03 (v100) — Historial de cobros en Reportes y desglose de propina en Tickets — chat de desarrollo
+- Reportes: nueva sección «Historial de cobros» (una línea por cobro: mesa, hora/fecha, método, quién cobró, monto sin propina, con propina y propina) con buscador por mesa y totales; respeta el rango de fechas elegido.
+- Más > Tickets: cada ticket y el total muestran monto sin propina, con propina y propina.
+
 ## 2026-11-03 (v99) — Abono de préstamo y color de fondo de mesas con aviso — chat de desarrollo
 - Abono/préstamo al personal: el nombre del empleado ya no distingue mayúsculas/minúsculas al abonar (se liga con el saldo existente); los mensajes de error (ej. «el abono es mayor que lo que debe») ahora se ven junto al botón Agregar, no solo arriba de la página.
 - Mesas con aviso: el fondo de la tarjeta cambia de color (amarillo a los 5 min / rojo a los 12 min de cuenta, rojo en mesa sin cobrar), con colores que se ven bien en tema oscuro y claro (`--avA`, `--avR`).
