@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-11-03 (v96) — Avisos en todas las mesas; el administrador puede quitarlos por mesa — chat de desarrollo
+- Los avisos de cobro (cuenta impresa, sin cobrar) vuelven a aplicar a TODAS las mesas, incluidos pedidos con nombre.
+- Nuevo botón «🔕 Sin avisos» / «🔔 Activar avisos» dentro de la mesa (solo administrador, pide NIP). La mesa marcada muestra 🔕 en la lista y no genera avisos ni entra al aviso del corte. Se guarda en `config/sinav` (se sincroniza entre celulares).
+- La exención vale solo para el pedido que ya estaba abierto al marcarla: cuando se cobra y llega otro cliente a esa mesa, vuelve a avisar.
+
 ## 2026-11-02 (v95) — Alertas de mesa: solo mesas preestablecidas (más robusto) — chat de desarrollo
 - Las alertas ("Mesas por revisar", cuenta sin pagar, inactividad) ahora solo aplican a mesas 1-20 y Para llevar L1-L3 (y sus cuentas divididas). Cualquier otro pedido (con nombre, con cualquier formato de id) queda excluido, no solo los que empiezan con "X-".
 - El reloj de la parte superior muestra el número de versión instalada (ej. "· v95") para saber si el celular ya actualizó.
