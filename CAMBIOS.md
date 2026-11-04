@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-04 (v102) — Abonar préstamos directo en la lista de «Préstamos al personal» — chat de desarrollo
+- El botón «Abonar» de cada empleado ahora abre ahí mismo un cuadro con monto, «Pagar todo», casilla «Descontado de nómina» y botón «Registrar abono» (antes solo llenaba el formulario de arriba y no se veía que pasara algo). Los errores salen dentro del mismo cuadro.
+- El formulario de arriba (tipo «Abono de préstamo») sigue funcionando igual.
+
 ## 2026-11-03 (v101) — Cóctel campechano: opciones Ostión, Pulpo/ost y Ceviche/ost — chat de desarrollo
 - Nuevas opciones en «Preparación y extras» del Cóctel campechano: **Ostión** (puro ostión: la pacotilla se cambia por ostión), **Pulpo/ost** (pulpo + ostión; mismo cargo por tamaño que Cam/pul: +25/+50/+43) y **Ceviche/ost** (ceviche preparado + ostión, sin cargo). Descuentan inventario según la receta (se cambia solo la parte de pacotilla).
 - Ostión puro y Ceviche/ost no suman cargo; si se quiere cobrar diferente se edita `MODP`.
