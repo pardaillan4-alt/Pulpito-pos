@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-06 (v103) — Compra de cerveza/refrescos: recuerda la compra anterior — chat de desarrollo
+- Al registrar una compra de cervezas/refrescos por caja, cada bebida se registra con su última cantidad de cajas, precio por caja y piezas por caja (se guarda en `config/mapc`, campos `q`,`c`). La próxima vez aparecen ya escritos pero desmarcados (renglones tenues): se marca ✓ lo que se compró y se edita cantidad o precio si cambió. Nada se registra hasta marcar y pulsar «Registrar compras».
+
 ## 2026-11-04 (v102) — Abonar préstamos directo en la lista de «Préstamos al personal» — chat de desarrollo
 - El botón «Abonar» de cada empleado ahora abre ahí mismo un cuadro con monto, «Pagar todo», casilla «Descontado de nómina» y botón «Registrar abono» (antes solo llenaba el formulario de arriba y no se veía que pasara algo). Los errores salen dentro del mismo cuadro.
 - El formulario de arriba (tipo «Abono de préstamo») sigue funcionando igual.
