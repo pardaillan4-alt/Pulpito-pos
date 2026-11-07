@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-06 (v104) — Botón «Corte de caja y gastos» en la pantalla de Mesas — chat de desarrollo
+- Arriba de las mesas, botón verde que abre directo el Corte de caja (para registrar gastos). Se muestra a quien tenga permiso de corte (administrador y cajero); el mesero no lo ve.
+
 ## 2026-11-06 (v103) — Compra de cerveza/refrescos: recuerda la compra anterior — chat de desarrollo
 - Al registrar una compra de cervezas/refrescos por caja, cada bebida se registra con su última cantidad de cajas, precio por caja y piezas por caja (se guarda en `config/mapc`, campos `q`,`c`). La próxima vez aparecen ya escritos pero desmarcados (renglones tenues): se marca ✓ lo que se compró y se edita cantidad o precio si cambió. Nada se registra hasta marcar y pulsar «Registrar compras».
 
