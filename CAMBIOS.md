@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-06 (v105) — Corte de caja reordenado y botón 💵 fijo en Mesas — chat de desarrollo
+- Corte de caja: arriba va «Gastos, nómina e ingresos extra» (con préstamos); después «Corte de caja (solo efectivo)» y el conteo físico.
+- El botón de acceso al corte ahora es solo 💵, chico y fijo abajo a la derecha en la pantalla de Mesas (siempre visible, como el de enviar). Lo ven quienes tienen permiso de corte.
+
 ## 2026-11-06 (v104) — Botón «Corte de caja y gastos» en la pantalla de Mesas — chat de desarrollo
 - Arriba de las mesas, botón verde que abre directo el Corte de caja (para registrar gastos). Se muestra a quien tenga permiso de corte (administrador y cajero); el mesero no lo ve.
 
