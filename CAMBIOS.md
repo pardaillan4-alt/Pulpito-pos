@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-08 (v106) — Depósito de efectivo al banco — chat de desarrollo
+- Nuevo tipo en Gastos/Nómina/Entradas: «Depósito de efectivo al banco (no es gasto)». No cuenta como gasto ni en el Estado de resultados ni en el corte de caja (no cambia el efectivo esperado). Aparece en la lista de movimientos, en el ticket del corte y como línea informativa en Reportes («Depósitos de efectivo al banco»).
+
 ## 2026-11-06 (v105) — Corte de caja reordenado y botón 💵 fijo en Mesas — chat de desarrollo
 - Corte de caja: arriba va «Gastos, nómina e ingresos extra» (con préstamos); después «Corte de caja (solo efectivo)» y el conteo físico.
 - El botón de acceso al corte ahora es solo 💵, chico y fijo abajo a la derecha en la pantalla de Mesas (siempre visible, como el de enviar). Lo ven quienes tienen permiso de corte.
