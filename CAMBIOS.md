@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-08 (v107) — El depósito al banco resta del efectivo esperado — chat de desarrollo
+- Los depósitos de efectivo al banco ahora SÍ restan del «Efectivo esperado» del corte (sale una línea «− Depósitos al banco»). Siguen sin ser gasto: no afectan el Estado de resultados.
+
 ## 2026-11-08 (v106) — Depósito de efectivo al banco — chat de desarrollo
 - Nuevo tipo en Gastos/Nómina/Entradas: «Depósito de efectivo al banco (no es gasto)». No cuenta como gasto ni en el Estado de resultados ni en el corte de caja (no cambia el efectivo esperado). Aparece en la lista de movimientos, en el ticket del corte y como línea informativa en Reportes («Depósitos de efectivo al banco»).
 
