@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-09 (v108) — Tostadas de surimi y caracol; Orden de ensalada normal — chat de desarrollo
+- Tostada: nuevas opciones Surimi ($52, 0.08 kg de surimi) y Caracol ($65, 0.06 kg de caracol). Precios y cantidades estimados; ajustar en Recetas y costos.
+- Orden de: nueva opción «Ensalada normal» $12 (lechuga 0.04 kg, jitomate 0.04 kg, pepino 0.03 kg; cantidades estimadas).
+
 ## 2026-11-08 (v107) — El depósito al banco resta del efectivo esperado — chat de desarrollo
 - Los depósitos de efectivo al banco ahora SÍ restan del «Efectivo esperado» del corte (sale una línea «− Depósitos al banco»). Siguen sin ser gasto: no afectan el Estado de resultados.
 
