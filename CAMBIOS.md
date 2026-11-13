@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-13 (v109) — Ostiones: A la diabla media ($75) y Rasurados media ($83) — chat de desarrollo
+- Nuevas opciones en Ostiones, junto a su orden completa. Descuentan la mitad del ostión de su orden (0.09). A la diabla media usa la misma regla de salsa diabla (0.1 porción) que la orden completa.
+
 ## 2026-11-09 (v108) — Tostadas de surimi y caracol; Orden de ensalada normal — chat de desarrollo
 - Tostada: nuevas opciones Surimi ($52, 0.08 kg de surimi) y Caracol ($65, 0.06 kg de caracol). Precios y cantidades estimados; ajustar en Recetas y costos.
 - Orden de: nueva opción «Ensalada normal» $12 (lechuga 0.04 kg, jitomate 0.04 kg, pepino 0.03 kg; cantidades estimadas).
