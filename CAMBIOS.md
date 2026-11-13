@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-11-13 (v110) — Plano 2D de mesas (opcional) — chat de desarrollo
+- Pantalla Mesas: botón «🗺️ Ver plano» / «☰ Ver lista» (se recuerda por celular; por defecto sigue la lista). El plano muestra cada mesa en su lugar con su color de estado, monto, minutos y avisos; se toca para abrir el pedido.
+- El administrador (con NIP) puede «✏️ Acomodar mesas»: arrastra cada mesa, cambia su tamaño y mueve las etiquetas Entrada / Cocina / Barra. El acomodo se guarda en `config/plano` y se comparte entre celulares. «Restablecer» regresa al acomodo inicial (cuadrícula).
+- Pedidos con nombre y cuentas divididas salen debajo del plano como tarjetas.
+
 ## 2026-11-13 (v109) — Ostiones: A la diabla media ($75) y Rasurados media ($83) — chat de desarrollo
 - Nuevas opciones en Ostiones, junto a su orden completa. Descuentan la mitad del ostión de su orden (0.09). A la diabla media usa la misma regla de salsa diabla (0.1 porción) que la orden completa.
 
