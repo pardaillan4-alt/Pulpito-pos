@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-13 (v111) — Plano de mesas con la distribución real del local — chat de desarrollo
+- El plano inicial ahora copia el dibujo del local: mesas 1-5, 7-9, 11-15 en su lugar (individuales y dobles), Av. Santa Úrsula, Calle Santo Tomás, baños, cocina y loza. Mesas 6, 10, 16-20 y Para llevar quedan fuera del plano (salen como tarjetas debajo) y se pueden agregar con «＋».
+- Editable por el administrador: arrastrar mesas, cambiar tamaño, «🗑 Quitar del plano», «＋ Mesa» para agregar una fuera del plano y «Restablecer». Si una mesa cambia de número o de lugar, se mueve su cuadro. El acomodo guardado en v110 se descarta una vez (nueva versión de plano).
+
 ## 2026-11-13 (v110) — Plano 2D de mesas (opcional) — chat de desarrollo
 - Pantalla Mesas: botón «🗺️ Ver plano» / «☰ Ver lista» (se recuerda por celular; por defecto sigue la lista). El plano muestra cada mesa en su lugar con su color de estado, monto, minutos y avisos; se toca para abrir el pedido.
 - El administrador (con NIP) puede «✏️ Acomodar mesas»: arrastra cada mesa, cambia su tamaño y mueve las etiquetas Entrada / Cocina / Barra. El acomodo se guarda en `config/plano` y se comparte entre celulares. «Restablecer» regresa al acomodo inicial (cuadrícula).
