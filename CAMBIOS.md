@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-13 (v112) — Plano: línea de pared y más espacio abajo — chat de desarrollo
+- Línea punteada amarilla horizontal entre la mesa 3 y las mesas 13/15, que empieza donde termina la cocina (movible/quitable en «Acomodar mesas»). Mesa 15 bajó un poco para quedar debajo de la línea.
+- El plano es más largo hacia abajo (≈14 %) para poder mover mesas; los acomodos ya guardados se conservan.
+
 ## 2026-11-13 (v111) — Plano de mesas con la distribución real del local — chat de desarrollo
 - El plano inicial ahora copia el dibujo del local: mesas 1-5, 7-9, 11-15 en su lugar (individuales y dobles), Av. Santa Úrsula, Calle Santo Tomás, baños, cocina y loza. Mesas 6, 10, 16-20 y Para llevar quedan fuera del plano (salen como tarjetas debajo) y se pueden agregar con «＋».
 - Editable por el administrador: arrastrar mesas, cambiar tamaño, «🗑 Quitar del plano», «＋ Mesa» para agregar una fuera del plano y «Restablecer». Si una mesa cambia de número o de lugar, se mueve su cuadro. El acomodo guardado en v110 se descarta una vez (nueva versión de plano).
