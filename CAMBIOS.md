@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-16 (v113) — Confirmación al desmarcar productos en el cobro — chat de desarrollo
+- En Cobrar, al quitar la palomita de un producto (o «Desmarcar todas») pregunta si está seguro; si dice que no, el producto sigue marcado. Marcar no pregunta nada.
+
 ## 2026-11-13 (v112) — Plano: línea de pared y más espacio abajo — chat de desarrollo
 - Línea punteada amarilla horizontal entre la mesa 3 y las mesas 13/15, que empieza donde termina la cocina (movible/quitable en «Acomodar mesas»). Mesa 15 bajó un poco para quedar debajo de la línea.
 - El plano es más largo hacia abajo (≈14 %) para poder mover mesas; los acomodos ya guardados se conservan.
