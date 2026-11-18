@@ -1,5 +1,14 @@
 # Registro de cambios
 
+## 2026-11-18 (v114) — Plano del local rediseñado como dibujo 2D realista — chat de desarrollo
+- El plano de Mesas ahora es un dibujo del local visto desde arriba, hecho con el croquis, las fotos y el video del dueño: piso crema del comedor y terracota del área de Santo Tomás, paredes naranjas con pilastras, fachada de vidrio con puerta doble sobre Av. Santa Úrsula, entrada con puertas plegables a Calle Santo Tomás, banquetas, calles y letrero, cocina (estufa con ollas, plancha, campana, refri, tarja, mesa de trabajo, repisas y pase con vitrina), baños H/M, loza (barra con platos, tarja doble, escurridor, botes), caja, refri de refrescos, mesa de salsas, congelador, columna, campana del techo, sombrilla, árboles y bugambilia, cuadros en las paredes y ventanas altas.
+- Cada mesa se dibuja con su forma (individual, doble o triple, derecha o girada) y su estilo (mantel azul, madera, tablones oscuros, amarilla, metálica azul o negra) con sus sillas; las sillas que chocarían con una pared no se dibujan.
+- Estado: luz ámbar = ocupada, verde = platillos listos, roja parpadeante = aviso de cobro; número de mesa, monto (sin propina) y minutos; «!» si hay pedido sin enviar; palomita si se cobró hace poco; 🔕 si no lleva avisos. Se toca la mesa para abrirla.
+- Para llevar 1-3 aparecen dentro del plano. Las mesas sin lugar en el plano salen como botones chicos si están libres y como tarjetas si están ocupadas (junto con los pedidos con nombre).
+- Botones − / ＋ para acercar el plano (se recuerda por celular).
+- Acomodar (administrador con NIP): arrastrar mesas y muebles (funciona con el dedo), girar, tamaño, estilo, quitar, agregar y restablecer. Se guarda en `config/plano` con formato nuevo (`ver:4`, `t` = mesas, `d` = muebles); un acomodo guardado con la versión anterior se convierte solo.
+- Arreglo: el modo acomodar usaba la misma variable que la edición de recetas (`S.pe`); ahora usa `S.ple` y `S.pls`.
+
 ## 2026-11-16 (v113) — Confirmación al desmarcar productos en el cobro — chat de desarrollo
 - En Cobrar, al quitar la palomita de un producto (o «Desmarcar todas») pregunta si está seguro; si dice que no, el producto sigue marcado. Marcar no pregunta nada.
 
