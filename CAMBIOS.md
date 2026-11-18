@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-11-18 (v115) — Plano: mesa 6 en su lugar — chat de desarrollo
+- Mesa 6 (madera con sillas naranjas, individual) contra la pared del comedor que da al área de Santo Tomás, a la izquierda de la mesa 3, como en la foto del dueño; la 3 se recorrió un poco hacia la esquina.
+- Mesa 2 con mantel azul y sillas naranjas (nuevo estilo «Mantel azul, sillas naranjas»), como se ve en la foto.
+- El acomodo guardado con el plano de cuadros (v110-v113) ya no se convierte al plano nuevo: estaba estirado y ponía mesas dentro de la loza o fuera de su área. El plano nuevo arranca con la distribución real y se ajusta con «Acomodar».
+
 ## 2026-11-18 (v114) — Plano del local rediseñado como dibujo 2D realista — chat de desarrollo
 - El plano de Mesas ahora es un dibujo del local visto desde arriba, hecho con el croquis, las fotos y el video del dueño: piso crema del comedor y terracota del área de Santo Tomás, paredes naranjas con pilastras, fachada de vidrio con puerta doble sobre Av. Santa Úrsula, entrada con puertas plegables a Calle Santo Tomás, banquetas, calles y letrero, cocina (estufa con ollas, plancha, campana, refri, tarja, mesa de trabajo, repisas y pase con vitrina), baños H/M, loza (barra con platos, tarja doble, escurridor, botes), caja, refri de refrescos, mesa de salsas, congelador, columna, campana del techo, sombrilla, árboles y bugambilia, cuadros en las paredes y ventanas altas.
 - Cada mesa se dibuja con su forma (individual, doble o triple, derecha o girada) y su estilo (mantel azul, madera, tablones oscuros, amarilla, metálica azul o negra) con sus sillas; las sillas que chocarían con una pared no se dibujan.
