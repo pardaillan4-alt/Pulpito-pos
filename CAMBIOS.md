@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-20 (v117) — Inventario puede quedar en negativo y aviso de compras por registrar — chat de desarrollo
+- Al vender, las existencias ya no se detienen en 0: pueden quedar en negativo (solo insumos que ya tienen registro en inventario). Así, si una compra se registra días después, al sumarla el inventario queda en lo real y no con piezas de más. Quitar una compra equivocada también puede dejar negativo.
+- Nuevo cuadro rojo «⚠ Falta registrar compra» en Inventario (compras) y en Existencias con los insumos en negativo; en Existencias esos renglones salen en rojo. El valor total del inventario no resta los negativos.
+
 ## 2026-11-19 (v116) — Reabrir un corte cerrado — chat de desarrollo
 - En Corte de caja > Cortes recientes, el último corte tiene el botón «↺ Reabrir este corte para corregir» (solo administrador). Pide confirmación; el corte queda marcado como reabierto (`reab` con fecha y usuario, no se borra) y sus ventas, gastos y movimientos vuelven al corte abierto para corregirlos. Luego se cierra otra vez normalmente.
 - Los cortes reabiertos ya no se cuentan en la lista de cortes ni en Reportes (se usa el nuevo cierre). Los cortes ahora guardan su id de Firestore al leerse.
