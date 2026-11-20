@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-19 (v116) — Reabrir un corte cerrado — chat de desarrollo
+- En Corte de caja > Cortes recientes, el último corte tiene el botón «↺ Reabrir este corte para corregir» (solo administrador). Pide confirmación; el corte queda marcado como reabierto (`reab` con fecha y usuario, no se borra) y sus ventas, gastos y movimientos vuelven al corte abierto para corregirlos. Luego se cierra otra vez normalmente.
+- Los cortes reabiertos ya no se cuentan en la lista de cortes ni en Reportes (se usa el nuevo cierre). Los cortes ahora guardan su id de Firestore al leerse.
+
 ## 2026-11-18 (v115) — Plano: mesa 6 en su lugar — chat de desarrollo
 - Mesa 6 (madera con sillas naranjas, individual) contra la pared del comedor que da al área de Santo Tomás, a la izquierda de la mesa 3, como en la foto del dueño; la 3 se recorrió un poco hacia la esquina.
 - Mesa 2 con mantel azul y sillas naranjas (nuevo estilo «Mantel azul, sillas naranjas»), como se ve en la foto.
