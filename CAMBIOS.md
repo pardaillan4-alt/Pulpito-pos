@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-11-21 (v118) — Compartir el Excel de compras desde WhatsApp directo al POS — chat de desarrollo
+- `manifest.webmanifest` ahora declara `share_target`: el POS instalado aparece en el menú «Compartir» de Android para archivos .xlsx.
+- `sw.js` recibe el archivo compartido (POST a `./compartir`), lo guarda en el caché `pulpito-compartido` y abre la app con `?compartido=1`.
+- La app toma el archivo, va a Más > Inventario y corre la misma importación de compras que el botón «Subir archivo de compras» (pregunta cómo se pagó, etc.). Solo para usuarios con permiso de inventario y solo archivos .xlsx.
+- Para que aparezca la opción puede hacer falta desinstalar y volver a instalar la app desde Chrome.
+
 ## 2026-11-20 (v117) — Inventario puede quedar en negativo y aviso de compras por registrar — chat de desarrollo
 - Al vender, las existencias ya no se detienen en 0: pueden quedar en negativo (solo insumos que ya tienen registro en inventario). Así, si una compra se registra días después, al sumarla el inventario queda en lo real y no con piezas de más. Quitar una compra equivocada también puede dejar negativo.
 - Nuevo cuadro rojo «⚠ Falta registrar compra» en Inventario (compras) y en Existencias con los insumos en negativo; en Existencias esos renglones salen en rojo. El valor total del inventario no resta los negativos.

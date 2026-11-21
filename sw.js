@@ -1,5 +1,5 @@
-const V="pulpito-v117",A=["./","index.html","firebase-config.js","manifest.webmanifest","icon-192.png","icon-512.png"];
+const V="pulpito-v118",A=["./","index.html","firebase-config.js","manifest.webmanifest","icon-192.png","icon-512.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(A)).then(()=>self.skipWaiting()))});
-self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!=V).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
-self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!="GET"||!(u.origin==location.origin||u.hostname=="www.gstatic.com"))return;
+self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!=V&&x!="pulpito-compartido").map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
+self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method=="POST"&&u.pathname.endsWith("/compartir")){e.respondWith((async()=>{try{const fd=await e.request.formData(),f=fd.get("archivo");if(f&&f.size){const c=await caches.open("pulpito-compartido");await c.put("./archivo-compartido",new Response(f,{headers:{"x-nombre":encodeURIComponent(f.name||"compras.xlsx")}}))}}catch(x){}return Response.redirect("./?compartido=1",303)})());return}if(e.request.method!="GET"||!(u.origin==location.origin||u.hostname=="www.gstatic.com"))return;
  e.respondWith(caches.open(V).then(c=>c.match(e.request).then(h=>{const n=fetch(e.request).then(r=>{if(r.ok)c.put(e.request,r.clone());return r}).catch(()=>h);return h||n})))});
