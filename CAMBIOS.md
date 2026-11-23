@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-23 — conversación de análisis y reportes (sin cambio de versión, la app no cambió)
+- Se agrega a `CLAUDE.md` la sección de la tercera conversación: usuario de solo lectura `guadalupepulpito@gmail.com` (función `lector()` en las reglas de Firestore, publicada por Jorge el 23 nov), tareas programadas de lista de compras y reporte semanal, y la regla de no leer colecciones completas para no agotar la cuota gratuita de Firestore (se agotó el 23 nov).
+
 ## 2026-11-21 (v118) — Compartir el Excel de compras desde WhatsApp directo al POS — chat de desarrollo
 - `manifest.webmanifest` ahora declara `share_target`: el POS instalado aparece en el menú «Compartir» de Android para archivos .xlsx.
 - `sw.js` recibe el archivo compartido (POST a `./compartir`), lo guarda en el caché `pulpito-compartido` y abre la app con `?compartido=1`.

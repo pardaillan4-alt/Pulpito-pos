@@ -16,3 +16,10 @@ Este POS lo modifican **dos conversaciones de Claude** distintas (la del desarro
 - Cargo de opción por tamaño (`MODP`, `mpx`): campechano con pulpo al precio del cóctel de pulpo.
 - Cortesías y consumo interno (`CTS`, campo `cort` en las líneas, sección `cortR` del reporte).
 - Preparaciones con costo y caldo base automático en caldos (`PREP0`, `PREPC`, `prepCU`, `expP`, `CALDO0`, `CAPSU0`, `PAELLA0`, `SWAPP`, `SALSAS`/`salsaR`, `prepBox`), guarniciones por opción (`GUARM`, `guar`, `guarNota`, `ARROZ0`).
+
+## Tercera conversación: análisis y reportes automáticos (desde 2026-11-23)
+Hay una tercera conversación de Claude que **solo lee** los datos de Firestore para mandar a Jorge reportes y listas de compras automáticas. No modifica el POS salvo que Jorge lo pida (y entonces sigue estas mismas reglas).
+- Usa un usuario de **solo lectura**: `guadalupepulpito@gmail.com`. En las reglas de Firestore tiene `allow read` pero no `write` (función `lector()`). **No quitar esa función al editar las reglas** y no darle permiso de escritura. Nadie del personal debe usar ese correo.
+- Tareas programadas que leen Firestore: lista de compras para Central (domingo y jueves 8:00 a. m.) y reporte semanal (lunes 7:38 a. m.).
+- **Cuota de Firestore:** el proyecto está en el plan gratuito (50,000 lecturas al día, compartidas por el POS y las tareas). El 2026-11-23 se agotó por lecturas completas de colecciones grandes (`lineas` tiene más de 6,500 documentos). Por eso: ningún cambio al POS ni ningún script debe leer colecciones completas de `lineas`, `pagos`, `movs` o `compras`; siempre filtrar por fecha (`where("at", ">=", ...)`) o por límite.
+- La lista de compras usa la colección `conteos` (conteos físicos) y los gastos de caja de `movs` para detectar compras hechas como gasto. Si cambia la forma de guardar esos datos, avisar en este archivo.
