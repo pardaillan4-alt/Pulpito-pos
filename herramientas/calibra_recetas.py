@@ -135,7 +135,7 @@ def main():
     T = asyncio.run(teorico(D)); aj = T["aj"]
     res = []; nuevo = {k: v for k, v in aj.items()}
     for n, ((a, r0), (b, r1)) in pares.items():
-        comp = sum(float(x["q"]) for x in Cp if x["n"] == n and a <= x["at"] < b)
+        comp = sum(float(x["q"]) * (float(x.get("r") or 1)) for x in Cp if x["n"] == n and a <= x["at"] < b)  # r = rendimiento (parte aprovechable)
         mer = sum(float(x["q"]) for x in Me if x["n"] == n and a <= x["at"] < b)
         teo = sum(q for i, q, t in T["out"] if i == n and a <= t < b)
         real = float(r0["fis"]) + comp - mer - float(r1["fis"])
@@ -168,7 +168,7 @@ def main():
     if aplicar:
         nota = "calibrado " + time.strftime("%d/%m/%Y")
         body = {"fields": {"f": enc({k: float(v) for k, v in nuevo.items()}), "nota": enc(nota), "at": enc(int(ahora))}}
-        req = urllib.request.Request(f"{BASE}/config/ajrec", json.dumps(body).encode(),
+        req = urllib.request.Request(f"{BASE}/config/ajrec?updateMask.fieldPaths=f&updateMask.fieldPaths=nota&updateMask.fieldPaths=at", json.dumps(body).encode(),  # no borra rend
                                      {"Content-Type": "application/json", "Authorization": "Bearer " + tok}, method="PATCH")
         urllib.request.urlopen(req); salida["aplicado"] = nota
     print(json.dumps(salida, ensure_ascii=False, indent=1))

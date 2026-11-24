@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-11-24 (v124) — Rendimiento de compra (pulpa de jaiba) — conversación de análisis y reportes
+- Nuevo rendimiento por insumo (`REND0`, `rendDe`; `config/ajrec.rend` lo reemplaza): al registrar una compra (`invAlta`) entra al inventario solo la parte aprovechable y el costo queda por unidad limpia. Inicial: **Pulpa de jaiba 0.85** (viene con hueso; Jorge calcula que de 1 kg quedan 800–900 g). La compra se guarda con el peso comprado y el campo `r`; `recosto` y `calibra_recetas.py` lo toman en cuenta.
+- `calibra_recetas.py` ahora actualiza `config/ajrec` con `updateMask` para no borrar `rend`.
+
 ## 2026-11-24 (v123) — Cóctel campechano con opciones de un solo ingrediente — conversación de análisis y reportes
 - Las opciones del Cóctel campechano ahora son de un solo ingrediente: **Camarón, Pulpo, Ostión, Ceviche, Jaiba, Caracol, Surimi** (se quitaron Cam/pul, Cam/ost, Pulpo/ost y Ceviche/ost). Los mariscos de la receta del tamaño se reparten en partes iguales entre las opciones elegidas (`CMPF`, `cmpFr` en `subM`); sin opción se usa la receta normal (camarón y ostión). Pedido de Jorge para saber qué se consume en cada campechano.
 - El cargo de pulpo (`MODP`) pasa a la opción **Pulpo** (+$25 / +$50 / +$43), igual que antes con Cam/pul y Pulpo/ost.
