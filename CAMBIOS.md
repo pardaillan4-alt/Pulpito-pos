@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-11-24 (v121) — Camarones empanizados y ajuste de recetas por conteos físicos — conversación de análisis y reportes
+- **Camarones · Empanizados** ahora descuentan **Cam Empanizar** en lugar de **Camarón para orden** (en `recDe`, solo si existe el insumo «Cam Empanizar»). Era la causa de que Camarón para orden saliera en −4 y Cam Empanizar en 51.5 contra 14 contados el 22 nov.
+- **Ajuste de recetas por conteos físicos:** factor por insumo (`AJ0` en el código; `config/ajrec` con `{f:{insumo:factor}, nota, at}` lo reemplaza) que multiplica lo que descuentan todas las recetas de ese insumo (`ajR`, usado en `gasto` e `invAn`) y el costo de las recetas (`costR` en `cLin`, `rcRows`, Recetas e ingeniería de menú). En Recetas aparece «⚖ Ajustado por conteos físicos: …». Las recetas guardadas no se modifican.
+- Valores iniciales `AJ0` del análisis de ventas contra conteos del 10 al 22 nov (a medio camino del dato real): Pulpo 0.86, Almeja 0.82, Jaiba entera 0.83, Caracol 0.73, Camarón para caldo 0.91, Retazo 0.89, Cabeza de Camaron 0.89, Pata de mula 0.93, Pulpa de jaiba 1.37.
+- Nuevo `herramientas/calibra_recetas.py`: compara consumo real entre dos conteos contra lo que descuentan las recetas (ejecuta la lógica del POS en un navegador sin pantalla) y propone o aplica (`--aplicar`) nuevos factores. Solo ajusta insumos que se pesan (kg/l), con consumo suficiente y conteos posteriores a la última calibración; mueve el factor la mitad del camino cada vez (entre 0.5 y 1.6).
+
 ## 2026-11-24 (v120) — Conteo semanal de mariscos — chat de administración (curso)
 - Más › Conteo físico tiene dos modos: «Todo el inventario» (igual que antes) y «🦐 Mariscos semanal».
 - Mariscos semanal muestra solo los mariscos caros que se cuentan cada domingo (por defecto: Pacotilla, Pulpo, Pescadito, Mojarra, Filete, Camarón para orden, Camarón para empanizar, Empanada(s), Ostión; se buscan por nombre en el inventario). Cada renglón muestra la diferencia en cantidad, en % y en pesos; más de ±5% sale en rojo (`CSP`).
