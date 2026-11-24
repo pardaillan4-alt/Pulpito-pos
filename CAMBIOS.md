@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-11-24 (v123) — Cóctel campechano con opciones de un solo ingrediente — conversación de análisis y reportes
+- Las opciones del Cóctel campechano ahora son de un solo ingrediente: **Camarón, Pulpo, Ostión, Ceviche, Jaiba, Caracol, Surimi** (se quitaron Cam/pul, Cam/ost, Pulpo/ost y Ceviche/ost). Los mariscos de la receta del tamaño se reparten en partes iguales entre las opciones elegidas (`CMPF`, `cmpFr` en `subM`); sin opción se usa la receta normal (camarón y ostión). Pedido de Jorge para saber qué se consume en cada campechano.
+- El cargo de pulpo (`MODP`) pasa a la opción **Pulpo** (+$25 / +$50 / +$43), igual que antes con Cam/pul y Pulpo/ost.
+- Las opciones viejas siguen funcionando para pedidos ya guardados. Ojo: en pedidos viejos «Jaiba», «Ceviche» o «Surimi» solos significaban mitad camarón; ahora significan todo de ese ingrediente.
+- El campechano no lleva pulpa de jaiba salvo que se elija «Jaiba» (confirmado por Jorge).
+
 ## 2026-11-24 (v122) — El ajuste de recetas solo baja, nunca sube — conversación de análisis y reportes
 - Para que el ajuste por conteos no oculte mermas, robos o porciones de más: el factor de un insumo solo puede ser ≤1. Si se usa más de lo que piden las recetas, no se ajusta: `calibra_recetas.py` lo reporta como **faltante** (cantidad y pesos). Se quitó Pulpa de jaiba ×1.37 de `AJ0`.
 
