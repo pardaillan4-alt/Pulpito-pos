@@ -1,5 +1,13 @@
 # Registro de cambios
 
+## 2026-11-24 (v120) — Conteo semanal de mariscos — chat de administración (curso)
+- Más › Conteo físico tiene dos modos: «Todo el inventario» (igual que antes) y «🦐 Mariscos semanal».
+- Mariscos semanal muestra solo los mariscos caros que se cuentan cada domingo (por defecto: Pacotilla, Pulpo, Pescadito, Mojarra, Filete, Camarón para orden, Camarón para empanizar, Empanada(s), Ostión; se buscan por nombre en el inventario). Cada renglón muestra la diferencia en cantidad, en % y en pesos; más de ±5% sale en rojo (`CSP`).
+- «🖨 Hoja para contar»: abre una hoja imprimible con los productos, unidad, columna para lo contado, notas y firmas de quien contó y quien anotó (no muestra lo que dice el sistema, para que el conteo sea a ciegas) (`csHoja`).
+- «📊 Historial»: lee solo los últimos 10 documentos de `conteos` (`orderBy("at","desc").limit(10)`) y muestra una tabla producto × fecha con el % de diferencia y el valor de la diferencia de cada conteo (`csHist`, `csHistV`).
+- «✏️ Elegir productos» (solo administrador): cambia la lista; se guarda en `config/contsem` (`{l:[nombres]}`) y se comparte entre celulares.
+- «Aplicar conteo» es el mismo de siempre (`cntAplica`); en modo semanal el documento de `conteos` lleva además `sem:true`. Los campos de cada renglón (`n,u,sis,fis,dif,cu`) no cambian, así que la lista de compras automática sigue leyendo igual.
+
 ## 2026-11-23 (v119) — Gastos que son compra, categorías de insumos y reportes que gastan menos cuota — conversación de análisis y reportes
 - Caja › Gasto: si el gasto es de una categoría de insumos (Mariscos y pescado, Verdura y abarrotes, Bebidas, Reventa) y el concepto se parece a un insumo (ej. «Pollo 6 pechugas» → Pechuga, «Huevo»), al guardarlo aparece el cuadro «¿Este gasto fue compra de inventario?» para escribir la cantidad y sumarla a existencias. Al sumarlo, el gasto pasa a la categoría «Pago de compra registrada en inventario» (`GPC`) para que el estado de resultados lo reparta igual que una compra (`insSug`, `sugOk`, `sugBox`). La opción de capturar insumo y cantidad antes de guardar sigue igual.
 - Categorías de insumos: `icat0` ahora reconoce desechables (si la categoría «Desechables» existe), más artículos de limpieza (desodorante, piedra pómez, sanitas), salsas/purés/latas/sazonadores como Abarrotes (antes «tomate» los mandaba a Frutas y verduras) y huevo como Lácteos. Una vez por sesión, al entrar un administrador, los insumos que no tienen categoría guardada la guardan en Firestore (`catFix`), para que reportes y listas externas la vean.
