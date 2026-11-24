@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-11-23 (v119) — Gastos que son compra, categorías de insumos y reportes que gastan menos cuota — conversación de análisis y reportes
+- Caja › Gasto: si el gasto es de una categoría de insumos (Mariscos y pescado, Verdura y abarrotes, Bebidas, Reventa) y el concepto se parece a un insumo (ej. «Pollo 6 pechugas» → Pechuga, «Huevo»), al guardarlo aparece el cuadro «¿Este gasto fue compra de inventario?» para escribir la cantidad y sumarla a existencias. Al sumarlo, el gasto pasa a la categoría «Pago de compra registrada en inventario» (`GPC`) para que el estado de resultados lo reparta igual que una compra (`insSug`, `sugOk`, `sugBox`). La opción de capturar insumo y cantidad antes de guardar sigue igual.
+- Categorías de insumos: `icat0` ahora reconoce desechables (si la categoría «Desechables» existe), más artículos de limpieza (desodorante, piedra pómez, sanitas), salsas/purés/latas/sazonadores como Abarrotes (antes «tomate» los mandaba a Frutas y verduras) y huevo como Lácteos. Una vez por sesión, al entrar un administrador, los insumos que no tienen categoría guardada la guardan en Firestore (`catFix`), para que reportes y listas externas la vean.
+- Reportes: ya no vuelven a descargar lo que la app ya tiene en vivo (líneas de hoy; pagos, movimientos y cortes de los últimos 7 días) y guardan 15 minutos lo ya descargado de días anteriores (`rcGet`, `RPC`, `LV`). Botón «↻ Actualizar» para forzar datos frescos. Las compras se siguen leyendo siempre del servidor. Motivo: la cuota gratuita de Firestore (50,000 lecturas al día) se agotó el 23 nov.
+
 ## 2026-11-23 — conversación de análisis y reportes (sin cambio de versión, la app no cambió)
 - Se agrega a `CLAUDE.md` la sección de la tercera conversación: usuario de solo lectura `guadalupepulpito@gmail.com` (función `lector()` en las reglas de Firestore, publicada por Jorge el 23 nov), tareas programadas de lista de compras y reporte semanal, y la regla de no leer colecciones completas para no agotar la cuota gratuita de Firestore (se agotó el 23 nov).
 
