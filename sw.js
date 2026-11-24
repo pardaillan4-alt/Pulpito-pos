@@ -1,4 +1,4 @@
-const V="pulpito-v121",A=["./","index.html","firebase-config.js","manifest.webmanifest","icon-192.png","icon-512.png"];
+const V="pulpito-v122",A=["./","index.html","firebase-config.js","manifest.webmanifest","icon-192.png","icon-512.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(A)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!=V&&x!="pulpito-compartido").map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method=="POST"&&u.pathname.endsWith("/compartir")){e.respondWith((async()=>{try{const fd=await e.request.formData(),f=fd.get("archivo");if(f&&f.size){const c=await caches.open("pulpito-compartido");await c.put("./archivo-compartido",new Response(f,{headers:{"x-nombre":encodeURIComponent(f.name||"compras.xlsx")}}))}}catch(x){}return Response.redirect("./?compartido=1",303)})());return}if(e.request.method!="GET"||!(u.origin==location.origin||u.hostname=="www.gstatic.com"))return;

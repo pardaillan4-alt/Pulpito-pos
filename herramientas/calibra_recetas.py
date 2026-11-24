@@ -24,7 +24,7 @@ PROJ = "pulpito-pos"
 BASE = f"https://firestore.googleapis.com/v1/projects/{PROJ}/databases/(default)/documents"
 HTML = pathlib.Path(__file__).resolve().parent.parent / "index.html"
 PASO = 0.5           # fracción del camino hacia el dato real que se mueve cada vez
-MIN_F, MAX_F = 0.5, 1.6
+MIN_F, MAX_F = 0.5, 1.0   # nunca se sube arriba de 1: usar más de lo que dice la receta se reporta como faltante, no se ajusta
 TOL = 0.08           # diferencias menores a 8% no se ajustan
 UNID = ("kg", "l", "lt", "litro", "litros")   # solo insumos que se pesan/miden: en piezas u órdenes la diferencia es merma o captura, no receta
 MIN_TEO = 1.0        # consumo mínimo según recetas en el periodo para ajustar
@@ -153,6 +153,13 @@ def main():
                 fila["nota"] = "poco consumo en el periodo; se espera más información"
             elif not (RANGO_OK[0] <= ratio <= RANGO_OK[1]):
                 fila["nota"] = "diferencia demasiado grande para ser receta: revisar compras, unidad o conteo"
+            elif ratio > 1 + TOL:
+                cu = 0.0
+                try: cu = float(r1.get("cu") or 0)
+                except Exception: pass
+                fila["faltante"] = round(real - teo, 3); fila["faltante_pesos"] = round((real - teo) * cu, 2)
+                fila["nota"] = "FALTANTE: se usó más de lo que piden las recetas. No se ajusta: puede ser merma sin registrar, porción de más o robo"
+                if f0 < 1: fila["factor_nuevo"] = round(min(1.0, f0 * (1 + PASO * (ratio - 1))), 3); nuevo[n] = fila["factor_nuevo"]
             elif abs(ratio - 1) >= TOL:
                 f1 = min(MAX_F, max(MIN_F, f0 * (1 + PASO * (ratio - 1))))
                 fila["factor_nuevo"] = round(f1, 3); nuevo[n] = round(f1, 3)

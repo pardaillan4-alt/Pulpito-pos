@@ -1,5 +1,8 @@
 # Registro de cambios
 
+## 2026-11-24 (v122) — El ajuste de recetas solo baja, nunca sube — conversación de análisis y reportes
+- Para que el ajuste por conteos no oculte mermas, robos o porciones de más: el factor de un insumo solo puede ser ≤1. Si se usa más de lo que piden las recetas, no se ajusta: `calibra_recetas.py` lo reporta como **faltante** (cantidad y pesos). Se quitó Pulpa de jaiba ×1.37 de `AJ0`.
+
 ## 2026-11-24 (v121) — Camarones empanizados y ajuste de recetas por conteos físicos — conversación de análisis y reportes
 - **Camarones · Empanizados** ahora descuentan **Cam Empanizar** en lugar de **Camarón para orden** (en `recDe`, solo si existe el insumo «Cam Empanizar»). Era la causa de que Camarón para orden saliera en −4 y Cam Empanizar en 51.5 contra 14 contados el 22 nov.
 - **Ajuste de recetas por conteos físicos:** factor por insumo (`AJ0` en el código; `config/ajrec` con `{f:{insumo:factor}, nota, at}` lo reemplaza) que multiplica lo que descuentan todas las recetas de ese insumo (`ajR`, usado en `gasto` e `invAn`) y el costo de las recetas (`costR` en `cLin`, `rcRows`, Recetas e ingeniería de menú). En Recetas aparece «⚖ Ajustado por conteos físicos: …». Las recetas guardadas no se modifican.
